@@ -29,16 +29,3 @@ header h1 {
     text-shadow: 0 0 4px silver;
     margin: 0;           /* Remove margens que podem desalinhá-lo */
 }
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;   /* Espaço entre os links */
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-header nav a:hover {
-    color: #2f6bf8;
-}
-
