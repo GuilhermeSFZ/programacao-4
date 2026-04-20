@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Saga Sombra & Ossos</title>
+
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+        <link href="https://cdnfonts.com" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&family=New+Rocker&family=Style+Script&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <!--CSS-->
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/footer.css">
+
+        <!--JAVASCRIPT-->
+        <script src="javascript/script.js"></script>
+
+        	</head>
+	<body>
+        <div id="espaco-magico" class="amplificador-container"></div>
+        <header>
+            <div class="logo-container"> 
+                <img src="img/logo.png" class="logo">
+                <h1> Sombra & Ossos</h1>
+            </div>
+
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#personagens">Personagens</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#entrar">Entrar</a>
+            </nav>
+        </header>
+        <main class="container">
+            <section id="sobre" class ="card">
+                <h1>SEJAM BEM-VINDOS À WIKI SOMBRA & OSSOS</h1>
+                <h2>Sobre</h2>
+                <p>
+                    A Trilogia Sombra e Ossos, também conhecida como Trilogia Grisha, é uma série de três livros de fantasia e aventura para jovens 
+                    adultos escrita por Leigh Bardugo. Os três livros principais, em ordem, são Sombra e Ossos, Sol e Tormenta e Ruína e Ascensão.
+                    No Brasil, a trilogia foi inicialmente lançada pela Editora Gutenberg, mas depois seus direitos de publicação seres adquiridos pela 
+                    Planeta Minotauro em 2021.
+                </p>
+                <p>
+                    Vários contos, assim como a Duologia Six of Crows e a Duologia King of Scars, também se passam no mesmo universo.                
+                </p>
+                <br>
+                <h2>Livros</h2>
+            <!--Colocar a aba para cada livro (é chamada de acorddion) que abre e fecha, e que ao clica para abrir aparece o efeito dos amplificadores-->
+                <div class="livros">
+                    <div class="livro-item" onclick="toggleLivro(1)">
+                        <img src="img/capas - livros/Sombra&Ossos.jpg" class="livro" 
+                        onclick="invocarAmplificador('img/amplificadores/cervo.png', '#ffecb3', 'detalhe', 'rgba(255, 149, 0, 0.8)')">
+
+                        <div class="tabela-conteudo" id="livro-1">
+                            <h3>Sinopse</h3>
+                            <!--Colocar, sinopse, personagens etc-->
+                            <p>Em um país dividido pela Dobra das Sombras – uma faixa de terra povoada por monstros sombrios – e no qual a corte real está
+                            repleta de pessoas com poderes mágicos, Alina Starkov pode se considerar uma garota comum. Seus dias consistem em trabalhar como
+                             cartógrafa no Exército e em tentar esconder de seu melhor amigo, Maly, o que sente por ele.
+                            </p>
+                            <br>
+                            <p>Quando Maly é gravemente ferido por um dos monstros que vivem na Dobra, Alina, desesperada, descobre que é muito mais forte do que pensava:
+                             ela é consegue invocar o poder da luz,a única coisa capaz de acabar com a Dobra das Sombras e reunificar Ravka de uma vez por todas.
+                            </p>
+                            <br>
+                            <p>Por conta disso, Alina é enviada ao Palácio para ser treinada como parte de um grupo de guerreiros com habilidades extraordinárias, os Grishas.
+                            Sob os cuidados do Darkling, o Grisha mais poderoso de todos, Alina terá que aprender a lidar com seus novos poderes, navegar pelas perigosas 
+                            intrigas da corte e sobreviver a ameaças vindas de todos os lados.</p>
+                            <br>
+                            <table class="tabela-livro">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Ficha Técnica</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Título original</strong></td>
+                                        <td>Shadow & Bone</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Lançamento</strong></td>
+                                        <td>2012 (EUA) / 2013 (Brasil)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Tradutor(es)</strong></td>
+                                        <td>Eric Novello</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Páginas</strong></td>
+                                        <td>288<br>368</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                    <div class="livro-item" onclick="toggleLivro(2)">
+
+                        <img src="img/capas - livros/Sol&Tormenta.jpg" class="livro" 
+                        onclick="invocarAmplificador('img/amplificadores/cobra-marinha.png', '#00fff7', 'solido', 'rgba(0, 255, 247, 0.8)')">
+                        <div class="tabela-conteudo" id="livro-2">
+                            <h3>Sinopse</h3>
+                            <p>Na aguardada continuação de Sombra e Ossos, Alina e Maly precisam fugir das garras do Darkling após o terrível confronto na Dobra
+                            das Sombras.</p>
+                            <p>Apesar de finalmente ter se reunido com a pessoa mais importante de sua vida e de se ver livre do controle de Darkling e das 
+                            pressões da corte, Alina está atormentada pela culpa depois dos acontecimentos na Dobra. Mas não há tempo para reflexões quando o seu 
+                            principal objetivo é sobreviver. Nessa fuga frenética, em que precisa correr por sua vida e pelo destino de seu país, a Conjuradora do
+                            Sol acaba encontrando aliados – e inimigos – em figuras que nunca imaginou, como no corsário misterioso que é muito mais do que aparenta
+                            ser. </p>
+                            <p>Por sua vez, o Darkling está mais poderoso e determinado do que nunca. Com um novo poder assustador e extremamente perigoso,
+                             ele não irá poupar esforços para encontrar Alina e conquistar o trono de Ravka. O cerco está se fechando.</p>
+                            <br>
+                            <table class="tabela-livro">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Ficha Técnica</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Título original</strong></td>
+                                        <td>Siege & Storm</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Lançamento</strong></td>
+                                        <td>4 de junho de 2013 (EUA) <br>15 de abril de 2014 / 1 de abril de 2021 (Brasil)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Tradutor(es)</strong></td>
+                                        <td>Eric Novello</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Páginas</strong></td>
+                                        <td>448<br>365/352 (Brasil) </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="livro-item" onclick="toggleLivro(3)">
+                        <img src="img/capas - livros/Ruina&Ascenção.jpg" class="livro" 
+                        onclick="invocarAmplificador('img/amplificadores/fenix.png', '#ff4d4d', 'inversao', 'rgba(255, 89, 0, 0.8)')">
+                        <div class="tabela-conteudo" id="livro-3">
+                            <h3>Sinopse</h3>
+                            <p>Não estou arruinada. Eu sou a ruína.</p>
+                            <p>Após o seu embate com o Darkling, Alina Starkov se vê encurralada no subsolo, tentando recuperar as forças para salvar Ravka das garras de 
+                            seu oponente.  Sob a proteção e a vigilância do Apparat, Alina atinge outro status – agora não é somente a Conjuradora do Sol, mas sim uma 
+                            Santa que carrega em seus ombros a esperança de fiéis que rezam por um futuro mais brilhante. No entanto, invocar a luz nunca foi tão difícil.</p>
+                            <p>Com o futuro do país em suas mãos, Alina partirá em busca do terceiro amplificador de Morozova, o mitológico pássaro de fogo, com o 
+                            objetivo de derrotar o Darkling e libertar Ravka de uma vez por todas.</p>
+                            <br>
+                            <table class="tabela-livro">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Ficha Técnica</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Título original</strong></td>
+                                        <td>Ruin & Rising</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Lançamento</strong></td>
+                                        <td>17 de junho de 2014 (EUA-UK)
+                                        <br>8 de janeiro de 2015 / 1 de maio de 2021 (Brasil)</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Tradutor(es)</strong></td>
+                                        <td>Eric Novello</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Páginas</strong></td>
+                                        <td>432<br>344/336 (Brasil) </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h2>Personagens</h2>
+                <div class="personagens-grid">
+                    <div class="personagem-item" onclick="toggleLivro('p1')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/Alina_Starkov_by_Kevin_Wada.jpg" class="personagem-img">
+                            <div class="personagem-nome">Alina Starkov</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p1">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Status</strong></td><td>Viva (amplamente presumida como mártir)</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>• 17 (Trilogia Sombra e Ossos)<br>• 20-21 (Duologia King of Scars)</td></tr>
+                                    <tr><td><strong>Relacionamentos</strong></td><td>• Malyen Oretsev (marido)<br>• The Darkling (antigo interesse amoroso)<br>• Nikolai Lantsov (antigo interesse amoroso)</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Pai e Mãe sem nome †</td></tr>
+                                </tbody>
+
+                                <thead>
+                                    <tr><th colspan="2">Informações Físicas</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Branco (atualmente)<br>Castanho (originalmente)<br>Ruivo (brevemente, confeccionada)</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Castanho</td></tr>
+                                </tbody>
+
+                                <thead>
+                                    <tr><th colspan="2">Afiliação</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>• Proprietária do Orfanato em Keramzin<br>• Líder do Segundo Exército (anteriormente)<br>• Assistente de Cartógrafa no Primeiro Exército (anteriormente)</td></tr>
+                                    <tr><td><strong>Organizações</strong></td><td>• Orfanato em Keramzin<br>• Ordem Grisha (Etherealki)<br>• Primeiro e Segundo Exército (anteriormente)</td></tr>
+                                    <tr><td><strong>Tipo Grisha</strong></td><td>Sun Summoner (anteriormente)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>    
+
+                    <div class="personagem-item" onclick="toggleLivro('p2')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/DITW_GN_The_Darkling_01.jpg" class="personagem-img">
+                            <div class="personagem-nome">The Darkling</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p2">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Status</strong></td><td>Vivo (Entre o vazio e a criação)<br>Anteriormente morto (reencarnado)</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>Ancestral (pelo menos 400 anos)</td></tr>
+                                    <tr><td><strong>Relacionamentos</strong></td><td>Alina Starkov (antigo interesse amoroso)</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Ilya Morozova (avô)<br>• Baghra (mãe) †<br>• Ulla (meia-irmã)<br>• Malyen Oretsev (parente distante)<br>• Outros meio-irmãos</td></tr>
+                                </tbody>
+
+                                <thead>
+                                    <tr><th colspan="2">Informações Físicas</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Preto</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Cinza</td></tr>
+                                </tbody>
+
+                                <thead>
+                                    <tr><th colspan="2">Afiliação</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                    <tr><td><strong>Tipo Grisha</strong></td><td>Shadow Summoner (Conjurador de Sombras)</td></tr>
+                                    <tr><td><strong>Ordem</strong></td><td>Etherealki</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>• Líder do Segundo Exército (anteriormente)<br>• Rei de Ravka (por usurpação; anteriormente)</td></tr>
+                                    <tr><td><strong>Organizações</strong></td><td>• Segundo Exército<br>• Ordem Grisha</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+
+                    
+                    <div class="personagem-item" onclick="toggleLivro('p3')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/Malyen_Oretsev_by_Bella_Bergolts.jpg" class="personagem-img">
+                            <div class="personagem-nome">Malyen Oretsev</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p3">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Status</strong></td><td>Vivo (anteriormente morto)</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>• 18 (Trilogia Sombra e Ossos)<br>• 21-22 (Duologia King of Scars)</td></tr>
+                                    <tr><td><strong>Relacionamentos</strong></td><td>Alina Starkov (esposa)</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Pai e Mãe sem nome †<br>• Ilya Morozova (ancestral)<br>• Baghra (parente distante) †<br>• The Darkling (parente distante)</td></tr>
+                                </tbody>
+
+                                <thead>
+                                    <tr><th colspan="2">Informações Físicas</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Castanho</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Azul</td></tr>
+                                </tbody>
+
+                                <thead>
+                                    <tr><th colspan="2">Afiliação</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>• Professor no Orfanato de Keramzin<br>• Soldado do Primeiro Exército (anteriormente)<br>• Rastreador (anteriormente)</td></tr>
+                                    <tr><td><strong>Organizações</strong></td><td>• Orfanato de Keramzin<br>• Primeiro Exército (anteriormente)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+
+                    <div class="personagem-item" onclick="toggleLivro('p4')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/Nikolai_Lantsov_by_Kevin_Wada.jpg" class="personagem-img">
+                            <div class="personagem-nome">Nikolai Lantsov</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p4">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Status</strong></td><td>Vivo</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>• 20-21 (Triologia Sombra e Ossos)
+                                    <br>24 (duologia Six of Crows & duologia King of Scars)</td></tr>
+                                    <tr><td><strong>Relacionamentos</strong></td><td>• Zoya Nazyalensky (esposa)
+                                    <br>• Ehri Kir-Taban (ex-namorada)<br>• Alina Starkov (antigo interesse amoroso)</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Magnus Opjer (pai biológico)<br>• Tatiana Lantsov (mãe)
+                                    <br>• Alexandre III (padrasto)<br>• Vasily Lantsov (meio-irmão materno) †<br>• Linnea Opjer (meia-irmã paterna)
+                                    <br>• primo(a) mais novo(a) sem nome †<br>• Ludovic (primo)<br>• Ludmilla (tia) †</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Informações Físicas</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Loiro dourado<br>Vermelho (como Sturmhond)</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Avelã/Verde lamacento (como Sturmhond)</td></tr>
+                                    <tr><td><strong>Altura</strong></td><td>188 cm</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Afiliação</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>• Conselheiro da Rainha de Ravka<br>• Corsário (como Sturmhond)
+                                    <br>• Comandante do Volkvolny (como Sturmhond)<br>• Rei de Ravka (anteriormente)<br>• Príncipe de Ravka (anteriormente)
+                                    Grão-Duque de Udova (anteriormente)<br>• Major do 22º Regimento do Primeiro Exército (anteriormente)</td></tr>
+                                    <tr><td><strong>Organização</strong></td><td>Primeiro Exército</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="personagem-item" onclick="toggleLivro('p5')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/Baghra_by_Bon_Orthwick.jpg" class="personagem-img">
+                            <div class="personagem-nome">Baghra</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p5">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Status</strong></td><td>Morto</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>Ancestral</td></tr>
+                                    <tr><td><strong>Habilidades</strong></td><td>Habilidoso artesão de Durast</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Ilya Morozova (pai)<br>• Mãe otkazat'sya sem nome †
+                                    <br>• Irmã mais nova otkazat'sya sem nome † <br>• O Darkling (filho)<br>• Ulla (filha)
+                                    <br>• Outras crianças não identificadas
+                                    <br>• Malyen Oretsev (parente distante)</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Informações Físicas</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Preto</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Preto</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Afiliação</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                    <tr><td><strong>Ordem</strong></td><td>Etherealki</td></tr>
+                                    <tr><td><strong>Tipo Grisha</strong></td><td>Invocador das Sombras</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+
+                    <div class="personagem-item" onclick="toggleLivro('p6')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/David_Kostyk_by_Bella_Bergolts.jpg" class="personagem-img">
+                            <div class="personagem-nome">David Kostyk</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p6">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Status</strong></td><td>Morto</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>19-20 (Sombra e Osso) <br> 22-23 (Duologia do Rei das Cicatrizes)</td></tr>
+                                    <tr><td><strong>Habilidades</strong></td><td>Habilidoso artesão de Durast</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Mãe sem nome <br>• Pai sem nome</td></tr>
+                                    <tr><td><strong>Relacionamento</strong></td><td>Genya Safin † (esposa)</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Informações Físicas</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Castanho</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Afiliação</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>Membro do Triunvirato Grisha</td></tr>                                    
+                                    <tr><td><strong>Ordem</strong></td><td>Materialki</td></tr>
+                                    <tr><td><strong>Organizações</strong></td><td>• Segundo Exército<br>• Triunvirato Grish</td></tr>
+                                    <tr><td><strong>Tipo Grisha</strong></td><td>Durast</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+
+                    <div class="personagem-item" onclick="toggleLivro('p7')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/Genya_Safin_by_Kevin_Wada.jpg" class="personagem-img">
+                            <div class="personagem-nome">Genya Safin</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p7">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Habilidades</strong></td><td>
+                                    • Alteração de características físicas e faciais.<br>
+                                    • Cura de imperfeições na pele.<br>
+                                    • Manipulação de pigmentos e texturas orgânicas</td></tr>
+                                    <tr><td><strong>Status</strong></td><td>Viva</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>19</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Mãe sem nome <br>• Pai sem nome</td></tr>
+                                    <tr><td><strong>Relacionamento</strong></td><td>David Kostyk † (marido)</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Informações Físicas</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Ruiva</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Âmbar</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Afiliação</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>• Membro do Triunvirato Grisha<br>• Alfaiate da Rainha (anteriormente)</td></tr>                                    
+                                    <tr><td><strong>Ordem</strong></td><td>Corporaiki</td></tr>
+                                    <tr><td><strong>Organizações</strong></td><td>• Segundo Exército<br>• Triunvirato Grish</td></tr>
+                                    <tr><td><strong>Tipo Grisha</strong></td><td>Alfaiate</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+
+                    <div class="personagem-item" onclick="toggleLivro('p8')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/Tamar_Kir-Bataar_by_Kevin_Wada.jpg" class="personagem-img">
+                            <div class="personagem-nome">Tamar Kir-Bataar</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p8">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Amplificador</strong></td>
+                                    <td>Dente de Tubarão (assim como seu irmão Tolya).</td></tr>
+                                    <tr><td><strong>Status</strong></td><td>Viva</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>18-19</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Tolya Yul-Bataar (irmão gêmeo)<br>• Mãe sem nome †<br>• Pai sem nome †
+                                    <br>• Tolya Yul-Bataar (twin brother)<br>• Adrik Zhabin (brother-in-law)
+                                    <tr><td><strong>Relacionamento</strong></td><td>Nadia Zhabin (esposa)</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Informações Físicas</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Castanho Escuro/Preto</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Dourado</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Afiliação</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Nação</strong></td><td>• Ravka<br>• Shu Han</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>• Conselheira<br>• Membro da tripulação de Sturmhond (anteriormente)
+                                    <br>• Membro do Soldat Sol (anteriormente)
+                                    <br>• Membro da guarda pessoal do Rei Nikolai</td></tr>                                    
+                                    <tr><td><strong>Ordem</strong></td><td>Corporaiki</td></tr>
+                                    <tr><td><strong>Organizações</strong></td><td>Soldat Sol</td></tr>
+                                    <tr><td><strong>Tipo Grisha</strong></td><td>Sangrador (Heartrender)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+
+                    <div class="personagem-item" onclick="toggleLivro('p9')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/Tolya_Yul-Bataar_by_Laura_Sava.jpg" class="personagem-img">
+                            <div class="personagem-nome">Tolya Yul-Bataar</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p9">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Amplificador</strong></td>
+                                    <td>Dente de Tubarão (assim como sua irmã Tamar).</td></tr>
+                                    <tr><td><strong>Status</strong></td><td>Vivo</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>18-19</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Tamar Kir-Bataar (irmã gêmea)<br>• Nadia Zhabin (cunhada)</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Informações Físicas</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Preto</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Dourado</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Afiliação</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Nação</strong></td><td>• Ravka<br>• Shu Han</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>• Membro da tripulação de Sturmhond (anteriormente)
+                                    <br>• Membro do Soldat Sol (anteriormente)
+                                    <br>• Membro da guarda pessoal do Rei Nikolai</td></tr>                                    
+                                    <tr><td><strong>Ordem</strong></td><td>Corporaiki</td></tr>
+                                    <tr><td><strong>Organizações</strong></td><td>Soldat Sol</td></tr>
+                                    <tr><td><strong>Tipo Grisha</strong></td><td>Sangrador (Heartrender)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+
+                    <div class="personagem-item" onclick="toggleLivro('p10')">
+                        <div class="personagem-foto-wrapper">
+                            <img src="img/personagens/Zoya_Nazyalensky_by_Kevin_Wada.jpg" class="personagem-img">
+                            <div class="personagem-nome">Zoya Nazyalensky</div>
+                        </div>
+
+                        <div class="tabela-conteudo" id="livro-p10">
+                            <table class="tabela-personagem">
+                                <thead>
+                                    <tr><th colspan="2">Ficha Grisha</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td><strong>Poder</strong></td><td>• Manipulação de vento (Squaller).<br>
+                                    • Criação de anomalias acústicas.<br>
+                                    • Habilidades de todos os Etherealki e Fabrikator.<br>
+                                    • Transmutação em Dragão (vínculo com Juris).</td></tr>
+                                    <tr><td><strong>Status</strong></td><td>Viva</td></tr>
+                                    <tr><td><strong>Idade</strong></td><td>19-20</td></tr>
+                                    <tr><td><strong>Parentes</strong></td><td>• Sabina Garin (mãe)<br>• Suhm Nabri (pai)<br>• Liliyana Garin † (tia materna)
+                                    <br>• Lada Garin † (prima adotiva)</td></tr>
+                                    <tr><td><strong>Relacionamentos</strong></td><td>• Nikolai Lantsov (parceiro)<br>• Malyen Oretsev (ex-companheiro)</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Informações Físicas</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                    <tr><td><strong>Cor de cabelo</strong></td><td>Preto</td></tr>
+                                    <tr><td><strong>Cor dos olhos</strong></td><td>Azul acizentado</td></tr>
+                                    <tr><td><strong>Altura</strong></td><td>175 cm</td></tr>
+                                    <thead>
+                                        <tr><th colspan="2">Afiliação</th></tr>
+                                    </thead>
+                                    <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                    <tr><td><strong>Ocupação</strong></td><td>• Rainha de Ravka<br>• Conjuradora do Sol (ou Santa)
+                                    <br>• Soldada do Segundo Exército (anteriormente)<br>• Comandante do Segundo Exército (anteriormente)<br>
+                                    • Membro do Triunvirato Grisha (anteriormente)</td></tr>                                    
+                                    <tr><td><strong>Ordem</strong></td><td>• Etherealki<br>• Materialki (Pós rei das cicatrizes)</td></tr>
+                                    <tr><td><strong>Organizações</strong></td><td>Segundo Exército<br>Triunvirato Grish</td></tr>
+                                    <tr><td><strong>Tipo Grisha</strong></td><td>•  Conjurador de Vento/Ar<br>• Inferni (pós-Rei das Cicatrizes)
+                                    <br>• Conjurador de Água (pós-Rei das Cicatrizes)
+                                    <br>• Durast (pós-Rei das Cicatrizes)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+                </div>
+
+            </section>
+            <section id="author" class ="card">
+                <h2>Autora</h2>
+                <div class="author-layout"> 
+                    <img src="img/Leigh_Bardugo_02.jpg" class="photo">
+                    <div class="author-text">
+                        <p>
+                            Leigh Bardugo é uma autora de fantasia israelense-americana. Ela é mais conhecida por seus romances do Grishaverso para jovens adultos, que incluem 
+                            a trilogia Sombra e Ossos e as duologias Six of Crows e King of Scars. Ela também recebeu elogios por sua estreia adulta de fantasia paranormal, 
+                            Nona Casa. As séries Sombra e Ossos e Six of Crows foram adaptadas para Sombra e Ossos pela Netflix, e Nona Casa será adaptada pela Amazon Studios;
+                            Bardugo é produtora executiva de ambas as obras.
+                        </p>
+                        <p> 
+                            Bardugo nasceu em Israel e cresceu em Los Angeles (EUA). Ela frequentou a Universidade de Yale. Mora atualmente em Hollywood,
+                            de vez em quando também canta com sua banda: Captain Automatic. Foi considerada uma das seis melhores autoras estreantes de 2012
+                            pelo comitê New Voices da American Booksellers Association e também ganhou uma indicação ao prêmio Abraham Lincoln Award e ao Indie
+                            Next List Selection.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <span>&copy; Guilherme da Silva Ferraz, 2026 - Todos os direitos reservados.</span>
+        </footer>
+
+	</body>
+</html>
