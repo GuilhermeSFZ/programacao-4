@@ -34,3 +34,7 @@
 ```
 
 ---
+
+**Aluno**: Guilherme da Silva Ferraz.
+**RGA**: 202211722013
+**Universidade**: Universidade Federal do Mato Grosso - Campus Araguaia
