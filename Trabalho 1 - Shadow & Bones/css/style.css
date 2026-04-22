@@ -3,13 +3,27 @@
     padding: 0;
     box-sizing: border-box; 
 }
-
-p {
-  text-indent: 30px; /* Recua a primeira linha em 30 pixels */
-  text-align: justify;
-  font-size: 20px;
+p, ul {
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 1.5; 
 }
 
+p {
+    text-indent: 30px;
+    margin-bottom: 15px; /* Espaço entre parágrafos */
+}
+
+ul {
+    list-style-position: inside; /* Faz a bolinha da lista respeitar a margem */
+    list-style-type: square;     /* Deixa o marcador quadrado*/
+}
+
+ul li {
+    margin-bottom: 10px; /* Espaço entre um item da lista e outro */
+}
 
 .card{
     background-color: rgb(255, 255, 255);
@@ -77,6 +91,18 @@ textarea{
     height: 80px;
     resize: none;
 }
+
+a {
+    text-decoration: none; /* Remove o sublinhado*/
+    color: #D4AF37; 
+    transition: 0.3s; 
+}
+
+a:hover {
+    color: white; /* Muda de cor ao passar o mouse */
+    text-shadow: 0 0 10px #ffecb3;
+}
+
 .button{
     background-color: #df2981;
     color: white;
@@ -283,6 +309,12 @@ form{
     color: rgb(0, 0, 0);
 }
 
+.tabela-personagem ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 /* Ajuste do conteúdo do personagem para não ficar escuro demais */
 .personagem-item .tabela-conteudo {
     background: #f0f0f0; /* Fundo mais claro para leitura da ficha */
@@ -341,4 +373,5 @@ form{
     85% { transform: scale(1); opacity: 1; }
     100% { transform: scale(1.1); opacity: 0; }
 }
+
 

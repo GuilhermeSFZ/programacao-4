@@ -1,0 +1,75 @@
+/* Para Tablets e telas médias */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%; /* Aumenta a largura ocupada para não apertar o conteúdo */
+    }
+
+    .personagens-grid {
+        justify-content: center;
+    }
+
+    .author-layout {
+        gap: 20px;
+    }
+}
+
+/* Para Celulares e telas pequenas */
+@media (max-width: 768px) {
+    /* Ajuste do Header (Logo em cima, Nav embaixo) */
+    header {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Ajuste da Seção da Autora */
+    .author-layout {
+        flex-direction: column; /* Foto em cima do texto */
+        text-align: center;
+    }
+
+    .author-text {
+        max-width: 100%;
+    }
+
+    /* Ajuste dos Livros e Personagens */
+    .livros, .personagens-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .personagem-item {
+        max-width: 100%; /* Card ocupa a largura disponível */
+        width: 280px;
+    }
+
+    /* Ajuste de títulos para telas pequenas */
+    .card h1 {
+        font-size: 1.8em;
+        width: 90%;
+    }
+
+    .card h2 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    /* Ajuste da tabela para não "vazar" da tela */
+    table {
+        font-size: 14px; /* Diminui um pouco a letra em tabelas */
+        display: block;
+        overflow-x: auto; /* Adiciona rolagem lateral se a tabela for larga */
+    }
+}
