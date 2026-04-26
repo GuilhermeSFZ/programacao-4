@@ -1,0 +1,53 @@
+Descrição do Projeto
+
+Você deverá criar uma Pokédex, ou seja, um sistema que:
+
+Liste Pokémons automaticamente ao carregar a página
+Permita buscar Pokémons por nome ou ID
+Permita filtrar Pokémons por tipo
+Exiba informações visuais e textuais
+
+A aplicação deve consumir dados da seguinte API:
+https://pokeapi.co/
+
+Requisitos obrigatórios
+1. Estrutura da Página
+
+O site deve conter:
+
+Um banner no topo (tema Pokémon)
+Uma área de controles contendo:
+Campo de busca (input)
+Botão de busca
+Filtro por tipo (select)
+Uma área de exibição em formato de grid/lista de cards
+
+2. Listagem Inicial
+Ao carregar a página, devem ser exibidos no mínimo 50 Pokémons
+Cada Pokémon deve ser apresentado em um card
+
+Cada card deve conter:
+
+Nome
+Imagem (sprite)
+Tipo(s)
+
+
+3. Busca de Pokémon
+O usuário deve conseguir buscar por:
+Nome (ex: pikachu)
+ID (ex: 25)
+A busca deve ser feita diretamente na API
+O resultado deve atualizar a tela
+
+4. Filtro por Tipo
+Deve ser possível filtrar Pokémons por tipo (ex: fire, water)
+O filtro deve funcionar sobre a lista carregada
+Deve permitir voltar para “Todos”
+
+5. Estilização
+Utilizar CSS personalizado
+Aplicar:
+Layout em grid
+Cores harmônicas (tema escolhido)
+Efeitos visuais (hover, transições, etc.)

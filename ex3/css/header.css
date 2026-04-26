@@ -1,0 +1,17 @@
+h1{
+    display: flex;
+    justify-content: center;
+}
+.title {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 3rem;
+    margin-top: 20px;
+    text-shadow: 0 0 10px red;
+
+
+}
+.bombori{
+    text-shadow: 0 0 10px #ff6701,
+    0 0 20px #ff5e01,
+    0 0 30px #ffffff;
+}

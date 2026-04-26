@@ -1,0 +1,54 @@
+Descrição do jogo
+O jogo consiste em:
+Um elemento (imagem mask_yami.png) que aparece em posições aleatórias na tela
+O jogador deve clicar nesse elemento antes que ele desapareça
+Cada acerto soma pontos
+O jogo possui tempo limitado
+Ao final, a pontuação é exibida
+Requisitos obrigatórios
+Estrutura HTML
+O projeto deve conter:
+
+Título do jogo (<h1>)
+Área de pontuação visível
+Botão para iniciar o jogo
+Estrutura organizada com <div>
+Estilização CSS
+Tema visual coerente (ex: terror, anime, etc.)
+Posicionamento absoluto dos elementos do jogo
+Uso de:
+
+background
+border-radius
+hover (opcional)
+Cursor personalizado (obrigatório)
+Efeito visual adicional (ex: rastro, animação, glow, etc.)
+Lógica em JavaScript
+O jogo deve obrigatoriamente implementar:
+
+Mecânica principal
+setInterval() → gerar inimigos continuamente
+setTimeout() → limitar duração do jogo
+Math.random() → posições aleatórias
+Manipulação do DOM
+
+createElement() → criar inimigos
+appendChild() → adicionar ao DOM
+remove() → remover elementos
+Eventos:
+
+Evento de clique (onclick ou addEventListener)
+Atualização da pontuação em tempo real
+Efeitos visuais (obrigatório pelo menos 1)
+Rastro do mouse
+Animação de surgimento/desaparecimento
+Mudança de cor dinâmica
+Efeito de “sangue” ou partículas
+Feedback visual ao clicar
+
+Regras do jogo (mínimo esperado)
+
+Tempo total: 10 a 20 segundos
+Inimigos aparecem a cada 500ms a 1000ms
+Inimigos desaparecem automaticamente
+Pontuação aumenta a cada clique correto
