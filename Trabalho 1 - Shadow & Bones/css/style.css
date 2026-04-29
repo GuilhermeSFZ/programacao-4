@@ -43,7 +43,8 @@ ul li {
     font-family: 'Almendra SC', serif;
     margin-bottom: 15px;
 }
-.card h1 {
+.bem-vindo {
+    font-size: 40px;
     color: #D4AF37;
     text-shadow: 0 0 15px rgba(212, 175, 55, 0.45);
     text-align: center;
@@ -62,16 +63,6 @@ ul li {
     color: #D4AF37;
     font-family: 'Almendra SC', serif;
     margin-bottom: 15px;
-}
-
-.sub-section{
-    background: white;
-    color: white;
-    font-size: 2em;
-    font-weight: 400;
-    text-align: center;
-    padding: 70px;
-    margin-bottom: 20px;
 }
 
 .container .sobre{
@@ -103,20 +94,7 @@ a:hover {
     text-shadow: 0 0 10px #ffecb3;
 }
 
-.button{
-    background-color: #df2981;
-    color: white;
-    border: none;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
-}
 
-button:hover{
-    background-color: #ff5cb8;
-}
 
 form{
     display: flex;
@@ -137,7 +115,7 @@ form{
     gap: 45px;
 }
 .author-text{
-    flex: wrap;
+flex: 1;
     text-align: justify;
     font-size: 16px;
     line-height: 1.5;
@@ -190,6 +168,13 @@ form{
 .livro-item img:hover {
     transform: scale(1.05);
 }
+.tabela-conteudo p, 
+.tabela-conteudo ul {
+    margin-left: 0;
+    margin-right: 0;
+    text-indent: 0;
+    width: 100%;
+}
 
 .tabela-conteudo {
     max-height: 0px;
@@ -215,7 +200,7 @@ form{
     line-height: 1.5;
 }
 /* Estilo da Tabela dentro do Accordion */
-.tabela-livro {
+.tabela-livro, .tabela-personagem  {
     width: 100%; /* Faz a tabela ocupar toda a largura do conteúdo */
     border-collapse: collapse;
     margin-top: 20px;
@@ -257,7 +242,7 @@ form{
 /* Moldura e padronização da foto do personagem */
 .personagem-foto-wrapper {
     position: relative;
-    border: 3px solid #000000; /* Moldura rosa */
+    border: 3px solid #000000;
     border-radius: 10px;
     overflow: hidden;
     height: 380px; /* Altura fixa para todos os cards */
@@ -273,7 +258,7 @@ form{
 
 .personagem-foto-wrapper:hover {
     transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(223, 41, 129, 0.4);
+    box-shadow: 0 0 20px rgb(77, 74, 105);
 }
 
 /* Nome em cima da foto */
@@ -288,37 +273,54 @@ form{
     font-size: 1.2rem;
 }
 .tabela-personagem {
-    width: 100%; /* Faz a tabela ocupar toda a largura do conteúdo */
+    width: 100%;
+    table-layout: fixed; /* Força a tabela a não ultrapassar a largura do card */
     border-collapse: collapse;
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     overflow: hidden;
+    word-wrap: break-word; /* Faz o texto quebrar para não esticar a tabela */
 }
 
-.tabela-personagem th {
+.tabela-personagem th{
     background-color: #0f2862; 
     color: rgb(255, 255, 255);
     padding: 10px;
 }
 
+.sub-section-tabela-personagem{
+    background-color: #0f2862; 
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+
 .tabela-personagem td {
-    padding: 12px;
-    border-bottom: 1px solid navy;
-    font-size: 16px;
-    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Linha mais suave */
+    font-size: 14px; 
+    color: rgb(255, 255, 255);
+    vertical-align: top; /* Alinha o texto no topo da célula */
 }
 
 .tabela-personagem ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    text-align: left; /* Garante alinhamento à esquerda na ficha */
+}
+
+.tabela-personagem ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-indent: 0; /* Remove o recuo de parágrafo dentro da tabela */
 }
 
 /* Ajuste do conteúdo do personagem para não ficar escuro demais */
 .personagem-item .tabela-conteudo {
-    background: #f0f0f0; /* Fundo mais claro para leitura da ficha */
-    border-top: 2px solid #050505;
+    background: #000000; /* Fundo mais claro para leitura da ficha */
+    border-top: 2px solid navy;
 }
 /*Efeito especial dos Amplificadores inspirado no Expectro Patronum de Harry Potter*/
 .amplificador-container {

@@ -1,5 +1,5 @@
 function toggleLivro(id) {
-    const todos = document.querySelectorAll('.livro-conteudo');
+    const todos = document.querySelectorAll('.livros .tabela-conteudo');
 
     todos.forEach(el => {
         if (el.id !== 'livro-' + id) {
@@ -8,9 +8,25 @@ function toggleLivro(id) {
     });
 
     const atual = document.getElementById('livro-' + id);
-    atual.classList.toggle('ativo');
+
+    if (atual) {
+        atual.classList.toggle('ativo');
+    }
 }
 
+function togglePersonagem(id) {
+    const atual = document.getElementById('personagem-' + id);
+
+    const todos = document.querySelectorAll('.personagem-item .tabela-conteudo');
+
+    todos.forEach(p => {
+        if (p.id !== 'personagem-' + id) {
+            p.classList.remove('ativo');
+        }
+    });
+
+    if (atual) atual.classList.toggle('ativo');
+}
 
 function invocarAmplificador(arquivo, corLuz, tipo, corExplosao) {
             const container = document.getElementById('espaco-magico');
@@ -33,7 +49,6 @@ function invocarAmplificador(arquivo, corLuz, tipo, corExplosao) {
             } 
             else if (tipo === 'solido') {
                 // Cobra: Cor sólida usando máscara
-                bicho.style.maskImage = `url('${arquivo}')`;
                 bicho.style.maskImage = `url('${arquivo}')`;
                 bicho.style.backgroundColor = corLuz;
                 bicho.style.filter = `drop-shadow(0 0 25px ${corLuz})`;
