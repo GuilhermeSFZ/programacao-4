@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokédex</title>
+
+        <!-- CSS-->
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/footer.css">
+        <link rel="stylesheet" href="/css/header.css">
+
+        <!-- Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="PokeAPI Logo" class="logo-api">
+        </header>
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="Buscar Pokémon por nome ou ID">
+            <button onclick="searchPokemon()">Buscar</button>
+            <select id="TypeFilter" onChange="filterByType()">
+                <option value="">Todos os tipos</option>
+                <option value="bug">Inseto</option> <option value="dark">Sombrio</option>
+                <option value="dragon">Dragão</option>
+                <option value="electric">Elétrico</option>
+                <option value="fairy">Fada</option>
+                <option value="fighting">Lutador</option>
+                <option value="fire">Fogo</option>
+                <option value="flying">Voador</option>
+                <option value="ghost">Fantasma</option>
+                <option value="grass">Grama</option>
+                <option value="ground">Terra</option>
+                <option value="ice">Gelo</option>
+                <option value="normal">Normal</option>
+                <option value="poison">Venenoso</option>
+                <option value="rock">Pedra</option>
+                <option value="steel">Aço</option>
+                <option value="water">Água</option>
+                <option value="psychic">Psíquico</option> 
+            </select>
+        </div>
+        <main>
+            <div class="grid" id="pokemonGrid"></div>
+        </main>
+        <script src="script.js"></script>
+        
+        <footer>
+            <span>&copy; 2026 Pokédex. Todos os direitos reservados.</span>
+        </footer>
+
+    </body>
+</html>
