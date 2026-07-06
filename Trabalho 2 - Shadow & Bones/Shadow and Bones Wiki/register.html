@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Sombra & Ossos</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnfonts.com" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&family=New+Rocker&family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+</head>
+<body>
+    <div class="register-container">
+        <div id="form-register-wrap">
+            <div class="form-header">
+                <h1 class="form-title">Criar conta</h1>
+                <p class="form-subtitle">Junte-se ao fandom hoje</p>
+            </div>
+
+            <form method="POST" action="{{ url_for('pre_cadastro') }}">
+                
+                <div class="section-divider">
+                    <span>Dados pessoais</span>
+                </div>
+        
+                <div class="field-row">
+                    <div class="field">
+                        <label for="user-name">Nome de usuário *</label>
+                        <input type="text" id="user-name" name="username" placeholder="Ex.: kir-baatar" required>
+                    </div>
+        
+                    <div class="field">
+                        <label for="reg-email">E-mail *</label>
+                        <input type="email" id="reg-email" name="email" placeholder="carlos@gmail.com.br" autocomplete="off" required>
+                    </div>
+            
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="reg-senha">Senha *</label>
+                            <input type="password" id="reg-senha" name="password" placeholder="••••••••" required>
+                        </div>
+                
+                        <div class="field">
+                            <label for="reg-confirma">Confirmar senha *</label>
+                            <input type="password" id="reg-confirma" name="confirm_password" placeholder="••••••••" required>
+                        </div>
+                </div>
+
+                <button type="submit">
+                    <span class="btn-text">Solicitar acesso</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+                        <line x1="19" y1="8" x2="19" y2="14"/><line x1="19" y1="11" x2="22" y2="11"/>
+                    </svg>
+                </button>
+            </form>
+
+            <p class="form-link">
+                Já tem uma conta? <a href="{{ url_for('login') }}">Voltar para o Login</a>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

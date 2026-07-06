@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+        45deg,
+        #020024 0%,
+        #06143f 12%,
+        #0f2862 25%,
+        steelblue 38%,
+        #a3bbd1 50%,
+        steelblue 62%,
+        #0f2862 75%,
+        #06143f 88%,
+        #020024 100%
+        );    
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}

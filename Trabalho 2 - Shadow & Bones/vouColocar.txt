@@ -1,4 +1,19 @@
 tela login para quem quiser acessar Fóruns de Discussão, quiz
 colocar luz de traz dos livros
-seção sobre ordens grisha
+seção sobre ordens grisha: https://grishafandom.wordpress.com/the-grisha-orders/
 tela inicial e botar outras tela para 
+tirar os shiffons mas manter as imagens lá, criar aba para personagem (talvez criar um para cada) ou manter os shiffons, mas nessa aba personagens)
+add musica que começa a tocar apos login(Ravka pegar o link no soundcloud), mas ter uma maneira de pausar (na tela de configuração).
+aba grisha (ocultar cada parte enquanto não for clicado no link, mas ver viabilidade) com :
+Small Science
+Amplifier
+Merzost
+Nichevo'ya
+Jurda parem
+add aba de mapas: https://grishaverse.com/wp-content/uploads/2021/05/Bardugo_MapArt-GrishaverseLogo.jpg
+
+no endpoint de músicas colocar essa : Winter Prayer e ravka como opções etc
+
+as imagens criadas por mim, eu devo pegar o url no meu projeto do github 
+
+endpoint para artigos também
