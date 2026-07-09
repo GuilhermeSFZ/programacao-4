@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "@nestjs/swagger": "^11.4.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0"
   }
 }
