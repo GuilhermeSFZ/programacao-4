@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personagens - Grishaverse</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnfonts.com" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&family=New+Rocker&family=Style+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    <div id="espaco-magico" class="amplificador-container"></div>
+    
+    <header>
+        <div class="logo-container"> 
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <h1>Sombra & Ossos</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <!-- Menu Início / Explore -->
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">Explorar ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html">Página Principal</a></li>
+                        <li><a href="discuss.html">Fórum de Discussão</a></li>
+                        <li><a href="gallery.html">Galeria de Imagens</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Livros -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Livros ▾</a>
+                    <ul class="dropdown-content">
+                        <li class="nested-dropdown">
+                            <a href="#">Trilogia Sombra e Ossos ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-1">Sombra e Ossos (Livro 1)</a></li>
+                                <li><a href="books.html#livro-2">Sol e Tormenta (Livro 2)</a></li>
+                                <li><a href="books.html#livro-3">Ruína e Ascensão (Livro 3)</a></li>
+                            </ul>
+                        </li>
+                        <li class="nested-dropdown">
+                            <a href="#">Duologia Six of Crows ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-4">Six of Crows: Sangue e Mentiras</a></li>
+                                <li><a href="books.html#livro-5">Crooked Kingdom: Vingança e Redenção</a></li>
+                            </ul>
+                        </li>
+                        <li class="nested-dropdown">
+                            <a href="#">Duologia King of Scars ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-6">King of Scars</a></li>
+                                <li><a href="books.html#livro-7">Rule of Wolves</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="others.html">Outras Obras</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Grishaverse -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Grishaverse ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="grishOrders.html">Ordens Grisha</a></li>
+                        <li><a href="amplifiers.html">Amplificadores</a></li>
+                        <li><a href="characters .html">Personagens</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Autora -->
+                <li><a href="author.html">Autora</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="sobre" class="card">
+            <h2 class="welcome">PERSONAGENS DO GRISHAVERSE</h2>
+            <p style="text-align: center; margin-bottom: 30px;">
+                Conheça os principais heróis, vilões e figuras influentes que moldam os caminhos de Ravka e além. Clique no card de cada personagem para revelar sua Ficha Grisha completa.
+            </p>
+
+            <div class="personagens-grid">
+                <!-- Alina Starkov -->
+                <div class="personagem-item" onclick="togglePersonagem('p1')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="alina-pic" src="img/personagens/Alina_Starkov_by_Kevin_Wada.jpg" class="personagem-img" alt="Alina Starkov">
+                        <div class="personagem-nome">Alina Starkov</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p1">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Status</strong></td><td>Viva (amplamente presumida como mártir)</td></tr>
+                                <tr><td><strong>Idade</strong></td><td><ul> <li>17 (Trilogia Sombra e Ossos)</li><li> 20-21 (Duologia King of Scars)</li></ul></td></tr>
+                                <tr><td><strong>Relacionamentos</strong></td>
+                                <td><ul>
+                                    <li>Malyen Oretsev (marido)</li>
+                                    <li>The Darkling (antigo interesse amoroso)</li>
+                                    <li>Nikolai Lantsov (antigo interesse amoroso)</li>
+                                </ul></td></tr>                                    
+                                <tr><td><strong>Parentes</strong></td><td> Pai e Mãe sem nome †</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td><ul><li>Branco (atualmente)</li><li>Castanho (originalmente)</li><li>Ruivo (brevemente, confeccionada)</li></ul></td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Castanho</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td><ul> <li>Proprietária do Orfanato em Keramzin</li><li> Líder do Segundo Exército (anteriormente)</li><li> Assistente de Cartógrafa no Primeiro Exército (anteriormente)</li></ul></td></tr>
+                                <tr><td><strong>Organizações</strong></td><td><ul> <li>Orfanato em Keramzin</li> <li>Ordem Grisha (Etherealki)</li> <li>Primeiro e Segundo Exército (anteriormente)</li></ul></td></tr>
+                                <tr><td><strong>Tipo Grisha</strong></td><td>Sun Summoner (anteriormente)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>    
+
+                <!-- The Darkling -->
+                <div class="personagem-item" onclick="togglePersonagem('p2')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="the-pic" src="img/personagens/DITW_GN_The_Darkling_01.jpg" class="personagem-img" alt="The Darkling">
+                        <div class="personagem-nome">The Darkling</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p2">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Status</strong></td><td><ul><li>Vivo (Entre o vazio e a criação)</li><li>Anteriormente morto (reencarnado)</li></ul></td></tr>
+                                <tr><td><strong>Idade</strong></td><td>Ancestral (pelo menos 400 anos)</td></tr>
+                                <tr><td><strong>Relacionamentos</strong></td><td>Alina Starkov (antigo interesse amoroso)</td></tr>
+                                <tr><td><strong>Parentes</strong></td><td><ul> <li>Ilya Morozova (avô)</li><li>Baghra (mãe) †</li><li>Ulla (meia-irmã)</li><li>Malyen Oretsev (parente distante)</li><li>Outros meio-irmãos</li></ul></td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Preto</td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Cinza</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                <tr><td><strong>Tipo Grisha</strong></td><td>Shadow Summoner (Conjurador de Sombras)</td></tr>
+                                <tr><td><strong>Ordem</strong></td><td>Etherealki</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td><ul><li>Líder do Segundo Exército (anteriormente)</li><li>Rei de Ravka (por usurpação; anteriormente)</li></ul></td></tr>
+                                <tr><td><strong>Organizações</strong></td><td><ul><li>Segundo Exército</li><li>Ordem Grisha</li></ul></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+
+                <!-- Malyen Oretsev -->
+                <div class="personagem-item" onclick="togglePersonagem('p3')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="malyen-pic" src="img/personagens/Malyen_Oretsev_by_Bella_Bergolts.jpg" class="personagem-img" alt="Malyen Oretsev">
+                        <div class="personagem-nome">Malyen Oretsev</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p3">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Status</strong></td><td>Vivo (anteriormente morto)</td></tr>
+                                <tr><td><strong>Idade</strong></td><td><ul><li>18 (Trilogia Sombra e Ossos)</li><li>21-22 (Duologia King of Scars)</li></ul></td></tr>
+                                <tr><td><strong>Relacionamentos</strong></td><td>Alina Starkov (esposa)</td></tr>
+                                <tr><td><strong>Parentes</strong></td><td><ul><li>Pai e Mãe sem nome †</li><li>Ilya Morozova (ancestral)</li><li>Baghra (parente distante) †</li><li>The Darkling (parente distante)</li></ul></td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Castanho</td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Azul</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td><ul><li>Professor no Orfanato de Keramzin</li><li>Soldado do Primeiro Exército (anteriormente)</li><li>Rastreador (anteriormente)</li></ul></td></tr>
+                                <tr><td><strong>Organizações</strong></td><td><ul><li>Orfanato de Keramzin</li><li>Primeiro Exército (anteriormente)</li></ul></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+
+                <!-- Nikolai Lantsov -->
+                <div class="personagem-item" onclick="togglePersonagem('p4')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="nikolai-pic" src="img/personagens/Nikolai_Lantsov_by_Kevin_Wada.jpg" class="personagem-img" alt="Nikolai Lantsov">
+                        <div class="personagem-nome">Nikolai Lantsov</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p4">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Status</strong></td><td>Vivo</td></tr>
+                                <tr><td><strong>Idade</strong></td><td><ul><li>20-21 (Trilogia Sombra e Ossos)</li><li>(duologia Six of Crows & duologia King of Scars)</li></ul></td></tr>
+                                <tr><td><strong>Relacionamentos</strong></td><td><ul><li>Zoya Nazyalensky (esposa)</li><li>Ehri Kir-Taban (ex-namorada)</li><li>Alina Starkov (antigo interesse amoroso)</li></ul></td></tr>
+                                <tr><td><strong>Parentes</strong></td><td><ul><li>Magnus Opjer (pai biológico)</li><li>Tatiana Lantsov (mãe)</li><li>Alexandre III (padrasto)</li><li>Vasily Lantsov (meio-irmão materno) †</li><li>Linnea Opjer (meia-irmã paterna)</li><li>Ludovic (primo)</li></ul></td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Loiro dourado<br>Vermelho (como Sturmhond)</td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Avelã/Verde lamacento (como Sturmhond)</td></tr>
+                                <tr><td><strong>Altura</strong></td><td>188 cm</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td><ul><li>Conselheiro da Rainha de Ravka</li><li>Corsário (como Sturmhond)</li><li>Rei de Ravka (anteriormente)</li></ul></td></tr>
+                                <tr><td><strong>Organização</strong></td><td>Primeiro Exército</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Baghra -->
+                <div class="personagem-item" onclick="togglePersonagem('p5')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="baghra-pic" src="img/personagens/Baghra_by_Bon_Orthwick.jpg" class="personagem-img" alt="Baghra">
+                        <div class="personagem-nome">Baghra</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p5">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Status</strong></td><td>Morto</td></tr>
+                                <tr><td><strong>Idade</strong></td><td>Ancestral</td></tr>
+                                <tr><td><strong>Habilidades</strong></td><td>Habilidoso artesão de Durast</td></tr>
+                                <tr><td><strong>Parentes</strong></td><td><ul><li>Ilya Morozova (pai)</li><li>O Darkling (filho)</li><li>Ulla (filha)</li><li>Malyen Oretsev (parente distante)</li></ul></td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Preto</td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Preto</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                <tr><td><strong>Ordem</strong></td><td>Etherealki</td></tr>
+                                <tr><td><strong>Tipo Grisha</strong></td><td>Invocador das Sombras</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+
+                <!-- David Kostyk -->
+                <div class="personagem-item" onclick="togglePersonagem('p6')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="david-pic" src="img/personagens/David_Kostyk_by_Bella_Bergolts.jpg" class="personagem-img" alt="David Kostyk">
+                        <div class="personagem-nome">David Kostyk</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p6">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Status</strong></td><td>Morto</td></tr>
+                                <tr><td><strong>Idade</strong></td><td><ul><li>19-20 (Sombra e Osso)</li><li>22-23 (Duologia do Rei das Cicatrizes)</li></ul></td></tr>
+                                <tr><td><strong>Habilidades</strong></td><td>Habilidoso artesão de Durast</td></tr>
+                                <tr><td><strong>Parentes</strong></td><td> Mãe e pai sem nome</td></tr>
+                                <tr><td><strong>Relacionamento</strong></td><td>Genya Safin † (esposa)</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Castanho</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td>Membro do Triunvirato Grisha</td></tr>                                    
+                                <tr><td><strong>Ordem</strong></td><td>Materialki</td></tr>
+                                <tr><td><strong>Organizações</strong></td><td><ul><li>Segundo Exército</li><li>Triunvirato Grisha</li></ul></td></tr>
+                                <tr><td><strong>Tipo Grisha</strong></td><td>Durast</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+
+                <!-- Genya Safin -->
+                <div class="personagem-item" onclick="togglePersonagem('p7')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="genya-pic" src="img/personagens/Genya_Safin_by_Kevin_Wada.jpg" class="personagem-img" alt="Genya Safin">
+                        <div class="personagem-nome">Genya Safin</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p7">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Habilidades</strong></td><td><ul><li>Alteração de características físicas.</li><li>Manipulação de pigmentos orgânicos</li></ul></td></tr>
+                                <tr><td><strong>Status</strong></td><td>Viva</td></tr>
+                                <tr><td><strong>Idade</strong></td><td>19</td></tr>
+                                <tr><td><strong>Parentes</strong></td><td>Mãe e pai sem nome</td></tr>
+                                <tr><td><strong>Relacionamento</strong></td><td>David Kostyk † (marido)</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Ruiva</td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Âmbar</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td><ul><li>Membro do Triunvirato Grisha</li><li>Alfaiate da Rainha (anteriormente)</li></ul></td></tr>                                    
+                                <tr><td><strong>Ordem</strong></td><td>Corporaiki</td></tr>
+                                <tr><td><strong>Tipo Grisha</strong></td><td>Alfaiate</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+
+                <!-- Tamar Kir-Bataar -->
+                <div class="personagem-item" onclick="togglePersonagem('p8')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="tamar-pic" src="img/personagens/Tamar_Kir-Bataar_by_Kevin_Wada.jpg" class="personagem-img" alt="Tamar Kir-Bataar">
+                        <div class="personagem-nome">Tamar Kir-Bataar</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p8">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Status</strong></td><td>Viva</td></tr>
+                                <tr><td><strong>Idade</strong></td><td>18-19</td></tr>
+                                <tr><td><strong>Parentes</strong></td><td><ul><li>Tolya Yul-Bataar (irmão gêmeo)</li><li>Nadia Zhabin (cunhada)</li></ul></td></tr>
+                                <tr><td><strong>Relacionamento</strong></td><td>Nadia Zhabin (esposa)</td></tr>
+                                <tr><td><strong>Amplificador</strong></td><td>Dente de Tubarão.</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Castanho Escuro/Preto</td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Dourado</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka / Shu Han</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td><ul><li>Conselheira</li><li>Membro da guarda pessoal do Rei Nikolai</li></ul></td></tr>                                    
+                                <tr><td><strong>Ordem</strong></td><td>Corporaiki</td></tr>
+                                <tr><td><strong>Tipo Grisha</strong></td><td>Sangrador (Heartrender)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+
+                <!-- Tolya Yul-Bataar -->
+                <div class="personagem-item" onclick="togglePersonagem('p9')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="tolya-pic" src="img/personagens/Tolya_Yul-Bataar_by_Laura_Sava.jpg" class="personagem-img" alt="Tolya Yul-Bataar">
+                        <div class="personagem-nome">Tolya Yul-Bataar</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p9">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Amplificador</strong></td><td>Dente de Tubarão.</td></tr>
+                                <tr><td><strong>Status</strong></td><td>Vivo</td></tr>
+                                <tr><td><strong>Idade</strong></td><td>18-19</td></tr>
+                                <tr><td><strong>Parentes</strong></td><td><ul><li>Tamar Kir-Bataar (irmã gêmea)</li></ul></td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Masculino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Preto</td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Dourado</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka / Shu Han</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td><ul><li>Guarda pessoal do Rei Nikolai</li></ul></td></tr>                                    
+                                <tr><td><strong>Ordem</strong></td><td>Corporaiki</td></tr>
+                                <tr><td><strong>Tipo Grisha</strong></td><td>Sangrador (Heartrender)</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+
+                <!-- Zoya Nazyalensky -->
+                <div class="personagem-item" onclick="togglePersonagem('p10')">
+                    <div class="personagem-foto-wrapper">
+                        <img id="zoya-pic" src="img/personagens/Zoya_Nazyalensky_by_Kevin_Wada.jpg" class="personagem-img" alt="Zoya Nazyalensky">
+                        <div class="personagem-nome">Zoya Nazyalensky</div>
+                    </div>
+                    <div class="tabela-conteudo" id="personagem-p10">
+                        <table class="tabela-personagem">
+                            <thead>
+                                <tr><th colspan="2">Ficha Grisha</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Status</strong></td><td>Viva</td></tr>
+                                <tr><td><strong>Idade</strong></td><td>19-20</td></tr>
+                                <tr><td><strong>Parentes</strong></td><td><ul><li>Sabina Garin (mãe)</li><li>Suhm Nabri (pai)</li></ul></td></tr>
+                                <tr><td><strong>Relacionamentos</strong></td><td><ul><li>Nikolai Lantsov (parceiro)</li></ul></td></tr>
+                                <tr><td><strong>Poder</strong></td><td><ul><li>Manipulação de vento (Squaller)</li><li>Transmutação em Dragão</li></ul></td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Informações Físicas</th></tr>
+                                <tr><td><strong>Sexo</strong></td><td>Feminino</td></tr>
+                                <tr><td><strong>Cor de cabelo</strong></td><td>Preto</td></tr>
+                                <tr><td><strong>Cor dos olhos</strong></td><td>Azul acinzentado</td></tr>
+                                <tr class="sub-section-tabela-personagem"><th colspan="2">Afiliação</th></tr>
+                                <tr><td><strong>Nação</strong></td><td>Ravka</td></tr>
+                                <tr><td><strong>Ocupação</strong></td><td><ul><li>Rainha de Ravka</li><li>Membro do Triunvirato (anteriormente)</li></ul></td></tr>                                    
+                                <tr><td><strong>Ordem</strong></td><td>Etherealki</td></tr>
+                                <tr><td><strong>Tipo Grisha</strong></td><td>Conjurador de Vento/Ar</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>  
+            </div>
+
+            <h2>Referências e Créditos</h2>
+            <ul class="lista-referencias">
+                <li><strong>Textos:</strong> Adaptados da <a href="https://thegrishaverse.fandom.com/wiki/Grishaverse_Wiki" target="_blank">Grishaverse Wiki (Fandom)</a>.</li>
+                <li><strong>Imagens dos Personagens:</strong> Ilustrações oficiais por <a href="https://www.kevinwada.com/" target="_blank">Kevin Wada</a> e Bella Bergolts.</li>
+                <li><strong>Desenvolvimento:</strong> Projeto acadêmico para a disciplina de Programação IV - UFMT.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <span>&copy; Guilherme da Silva Ferraz, 2026 - Todos os direitos reservados.</span>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

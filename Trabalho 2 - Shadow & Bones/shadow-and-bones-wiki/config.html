@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Sombra & Ossos - Discussão</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+    
+    <main class="config-container">
+        <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 20px; color: #b89763; text-decoration: none;">
+            &larr; Voltar para a página principal
+        </a>
+        <h1>Configurações da Conta</h1>
+
+        <!-- ================= PERFIL GRISHA ================= -->
+        <section class="config-card">
+            <h2>Identidade no Fandom</h2>
+            <div class="profile-content">
+                <form>
+                    <label for="profile_image_input" class="upload-area" title="Alterar via Alfaiataria (Genya)">
+                        <img
+                            src="https://www.svgrepo.com/show/535711/user.svg"
+                            alt="Foto de perfil Grisha"
+                            width="150"
+                            height="150">
+                    </label>
+                    <input id="profile_image_input" type="file" name="foto" accept="image/*" hidden>
+                </form>
+
+                <div class="profile-info">
+                    <p><strong>Invocador:</strong> @kir-baatar</p>
+                    <p><strong>Email:</strong> carlos@gmail.com.br</p>
+                    <p><strong>Ordem Grisha:</strong> Corporação dos Magos (Conjurador da Luz)</p>
+                    <p><strong>Status de Acesso:</strong> Conjurador</p>
+                </div>
+            </div>
+            <a href="#" class="btn-primary">Modificar Foto de Perfil</a>
+
+        <!-- ================= SEGURANÇA ================= -->
+            <h2>Segurança da Conta</h2>
+            <form>
+                <div class="form-group">
+                    <label>Senha atual</label>
+                    <input type="password" name="senha_atual" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nova senha</label>
+                    <input type="password" name="nova_senha" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Confirmar nova senha</label>
+                    <input type="password" name="confirmar_senha" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Alterar Chave de Acesso</button>
+            </form>
+
+        <!-- ================= SOBRE A WIKI ================= -->
+            <h2>Sobre a Wiki</h2>
+            <p><strong>Projeto:</strong> Saga Sombra & Ossos Wiki</p>
+            <p><strong>Versão:</strong> 1.0 (Lançamento)</p>
+            <p><strong>Universo Base:</strong> Grishaverse (Leigh Bardugo)</p>
+            <p><strong>Desenvolvimento:</strong> HTML5, CSS3 Simétrico, JavaScript (ES6)</p>
+            <p><strong>Estilo Visual:</strong> Temática Palaciana & Conjuradora</p>
+
+        <!-- ================= AÇÕES DA CONTA ================= -->
+            <h2>Ações do Sistema</h2>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px;">
+                <form>
+                    <button type="submit" class="btn-primary">Logout</button>
+                </form>
+
+                <form>
+                    <button type="submit" class="btn-danger">Excluir conta</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/config.js"></script>
+</body>
+</html>

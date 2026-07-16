@@ -1,0 +1,167 @@
+header {
+    width: 100%;
+    /* Totalmente transparente na base, com um sombreado sutil no topo para dar leitura */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 100%);
+    
+    /* Moldura dupla fina em dourado fosco, muito comum na estética Belle Époque */
+    border-bottom: 3px double rgba(212, 175, 55, 0.35); 
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Logo na esquerda, Menu na direita */
+    align-items: center;
+    padding: 15px 5%;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    
+    position: relative; 
+    z-index: 100; /* Garante que o cabeçalho fique acima de todo o conteúdo */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto com a logo */
+    gap: 20px;           /* Espaço entre a logo e o título */
+}
+
+.logo {
+    width: 70px;         
+    height: auto;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2)); /* Leve brilho no brasão */
+}
+
+header h1 {
+    font-family: 'Almendra SC', serif; 
+    font-size: 48px;                   
+    color: silver;                     
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 255, 255, 0.2);
+    margin: 0;                         
+    letter-spacing: 2px;
+}
+
+/* Menu de navegação */
+/* Usando o sinal ">" para afetar apenas a primeira lista do menu principal */
+.nav-menu > ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important; /* Apenas o menu principal fica na horizontal */
+    flex-direction: row !important;
+    gap: 15px; 
+    align-items: center;
+}
+
+/* Afeta apenas os itens do menu principal (Explorar, Livros, Autora) */
+.nav-menu > ul > li {
+    position: relative; /* Base essencial para o posicionamento absoluto dos submenus */
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Links do Menu Principal */
+.nav-menu a {
+    font-family: 'Almendra SC', serif; 
+    font-size: 18px;
+    color: silver;                     /* Mantém o prateado clássico */
+    text-decoration: none;             /* Remove o sublinhado */
+    padding: 10px 15px;
+    display: block;
+    transition: 0.3s;                  /* Leve transição */
+    letter-spacing: 1px;
+    white-space: nowrap;               /* Impede que o texto principal quebre linha */
+}
+
+/* Hover nos Itens do Menu */
+.nav-menu a:hover {
+    color: #ffffff;                    /* Muda para branco ao passar o mouse */
+    text-shadow: 0 0 10px #ffecb3;     /* Brilho dourado suave */
+}
+
+
+/* Sub-menus */
+/* Esconde o menu de segundo nível por padrão, forçando layout vertical limpo */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Abre exatamente abaixo do item pai */
+    left: 0;
+    background-color: #1a1a1a; /* Cor de fundo escura */
+    min-width: 260px; /* Largura ajustada para acomodar textos longos */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.9);
+    border: 1px solid rgba(212, 175, 55, 0.5); /* Borda dourada */
+    z-index: 1000;
+    
+    /* Reseta completamente heranças indesejadas do style.css global */
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    list-style-type: none !important;
+}
+
+/* Força os itens internos do submenu a ficarem listados um abaixo do outro */
+.dropdown-content li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left !important;
+}
+
+/* Estilo dos links dentro do sub-menu */
+.dropdown-content a {
+    font-size: 15px; 
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    white-space: nowrap; /* Impede que os nomes dos livros quebrem de linha de forma feia */
+    color: silver;
+}
+
+.dropdown-content a:hover {
+    background-color: #2a2a2a;
+    color: #d4af37 !important; /* Destaque dourado no hover */
+}
+
+/* Mostra o sub-menu de 2º nível ao passar o mouse sobre o item pai */
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+
+/* --- ESTILO DOS SUB-DROPDOWNS (3º Nível - Trilogiase/Duologias lateralmente) --- */
+
+.nested-dropdown {
+    position: relative;
+}
+
+/* Esconde o menu de terceiro nível e posiciona lateralmente à ESQUERDA */
+.nested-content {
+    display: none;
+    position: absolute;
+    right: 100%;
+    left: auto;  
+    top: 0;
+    background-color: #1a1a1a;
+    min-width: 240px;
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.9);
+    z-index: 1001;
+
+    /* Reseta heranças do style.css */
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+/* Força os itens do terceiro nível a empilharem verticalmente */
+.nested-content li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Mostra o terceiro nível ao passar o mouse no item pai correspondente (.nested-dropdown) */
+.nested-dropdown:hover > .nested-content {
+    display: block;
+}

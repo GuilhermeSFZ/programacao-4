@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saga Sombra & Ossos</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnfonts.com" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&family=New+Rocker&family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+
+</head>
+<body>
+     <header>
+        <div class="logo-container"> 
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <h1>Sombra & Ossos</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <!-- Menu Início / Explore -->
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">Explorar ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html">Página Principal</a></li>
+                        <li><a href="discuss.html">Fórum de Discussão</a></li>
+                        <li><a href="gallery.html">Galeria de Imagens</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Livros -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Livros ▾</a>
+                    <ul class="dropdown-content">
+                        <!-- Trilogia Sombra e Ossos -->
+                        <li class="nested-dropdown">
+                            <a href="#">Trilogia Sombra e Ossos ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-1">Sombra e Ossos (Livro 1)</a></li>
+                                <li><a href="books.html#livro-2">Sol e Tormenta (Livro 2)</a></li>
+                                <li><a href="books.html#livro-3">Ruína e Ascensão (Livro 3)</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Duologia Six of Crows -->
+                        <li class="nested-dropdown">
+                            <a href="#">Duologia Six of Crows ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-4">Six of Crows: Sangue e Mentiras</a></li>
+                                <li><a href="books.html#livro-5">Crooked Kingdom: Vingança e Redenção</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Duologia King of Scars -->
+                        <li class="nested-dropdown">
+                            <a href="#">Duologia King of Scars ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-6">King of Scars</a></li>
+                                <li><a href="books.html#livro-7">Rule of Wolves</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="others.html">Outras Obras</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Grishaverse -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Grishaverse ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="grishOrders.html">Ordens Grisha</a></li>
+                        <li><a href="amplifiers.html">Amplificadores</a></li>
+                        <li><a href="characters .html">Personagens</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Autora -->
+                <li><a href="author.html">Autora</a></li>
+                <li class="login-icon">
+                    <a href="login.html" title="Login">
+                        <img src="https://www.svgrepo.com/show/508196/user-circle.svg" alt="Login" style="width: 24px; height: 24px; vertical-align: middle;">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="grisha-order-container">
+        <div class="grisha-order-wrapper">
+            <h1>As Ordens de Grisha</h1>
+            <p>Os Grisha são a elite mágica de Ravka, também conhecida como os soldados do Segundo Exército. Praticam a Pequena Ciência: manipulam a matéria em seus 
+                níveis mais fundamentais. Gosto de pensar nisso como uma versão mágica da química molecular. Status é tudo para o Grisha. Aqui estão as maneiras como 
+                suas ordens se quebram. (Todos os brasões de Adam F. Watkins.)
+            </p>
+
+            <section class="order-card">
+                
+                <!-- ================= SEÇÃO: THE DARKLING ================= -->
+                <div class="order-card-header">
+                    <h2>The Darkling</h2>
+                    <h3>Líder do Segundo Exército</h3>
+                </div>
+
+                <div class="order-crest-container">
+                    <img id="darkling-crest"
+                        src="http://localhost:3000/images/12" 
+                        alt="Brasão da Ordem de Darkling" 
+                        class="order-crest">
+                </div>
+                
+                <!-- ================= SEÇÃO: CORPORALKI ================= -->
+                <div class="order-card-header">
+                    <h2>Corporalki</h2>
+                    <h3>A ordem dos Mortos Vivos</h3>
+                    <p class="order-description">
+                        Ravka está cercada por inimigos e basicamente funciona como um estado guarnição. Os Corporalki são 
+                        considerados os soldados mais valiosos e, consequentemente, eles são os Grisha de mais alta patente.
+                    </p>
+                    
+                    <h3>Sangradores (Vermelho e Preto)</h3>
+                    <div class="order-crest-container">
+                        <img id="heartrender-crest" 
+                            src="http://localhost:3000/images/13" 
+                            alt="Brasão da Ordem Corporalki: Sangradores" 
+                            class="order-crest">
+                    </div>
+                    <p class="order-description">
+                        Uma Sangradora Corporalki pode arrancar o ar dos seus pulmões, desacelerar o seu pulso até você entrar em coma,
+                        ou literalmente esmagar o seu coração no peito — tudo isso sem nunca colocar um dedo em você.
+                    </p>
+
+                    <h3>Curandeiros (Vermelho e Cinza)</h3>
+                    <div class="order-crest-container">
+                        <img id="healer-crest" 
+                            src="http://localhost:3000/images/14" 
+                            alt="Brasão da Ordem Corporalki: Curandeiros" 
+                            class="order-crest">
+                    </div>
+                    <p class="order-description">
+                        Curandeiros consertam você de novo.
+                    </p>
+                </div> <!-- FECHA O BLOCO CORPORALKI -->
+
+                <!-- ================= SEÇÃO: ETHEREALKI ================= -->
+                <div class="order-card-header">
+                    <h2>Etherealki</h2>
+                    <h3>A Ordem dos Invocadores</h3>
+                    <p class="order-description">
+                        Os Grisha não podem criar ou animar a matéria. Os Inferni não criam fogo 'magicamente'. Eles invocam gases combustíveis como o 
+                        metano ou o hidrogênio, mas ainda precisam de uma pederneira para iniciar uma faísca. Os Etherealki frequentemente trabalham em 
+                        duplas. Tanto o Darkling quanto Alina são tecnicamente considerados Etherealki.
+                    </p>
+                    
+                    <h3>Aero-manipuladores (Azul & Prata)</h3>
+                    <div class="order-crest-container">
+                        <img id="squaller-crest" 
+                            src="http://localhost:3000/images/15" 
+                            alt="Brasão da Ordem Etherealki: Aero-manipuladores" 
+                            class="order-crest">
+                    </div>
+                    <p class="order-description">
+                        Os Aero-manipuladores podem aumentar ou diminuir a pressão do ar para criar tempestades.
+                    </p>
+
+                    <h3>Inferni (Azul & Vermelho)</h3>
+                    <div class="order-crest-container">
+                        <img id="inferni-crest" 
+                            src="http://localhost:3000/images/16" 
+                            alt="Brasão da Ordem Etherealki: Inferni" 
+                            class="order-crest">
+                    </div>
+                    <p class="order-description">
+                        Os Inferni não criam fogo "magicamente". Eles invocam gases combustíveis como o metano ou o hidrogênio,
+                        mas ainda precisam de uma pederneira para iniciar uma faísca.
+                    </p>
+
+                    <h3>Hidro-manipuladores (Azul & Azul-claro)</h3>
+                    <div class="order-crest-container">
+                        <img id="tidemaker-crest" 
+                            src="http://localhost:3000/images/17" 
+                            alt="Brasão da Ordem Etherealki: Tidemaker" 
+                            class="order-crest">
+                    </div>
+                    <p class="order-description">
+                        Os Hidro-manipuladores usam temperatura e pressão para invocar e controlar a água.
+                    </p>
+                </div> <!-- FECHA O BLOCO ETHEREALKI -->
+                
+                <!-- ================= SEÇÃO: MATERIALKI ================= -->
+                <div class="order-card-header">
+                    <h2>Materialki</h2>
+                    <h3>A Ordem dos Conjuradores</h3>
+                    <p class="order-description">
+                        Eles são os nerds de laboratório das Ordens Grisha. São os menos respeitados, mas se tornarão cada vez mais valiosos 
+                        para o esforço de guerra conforme a trilogia avança.
+                    </p>
+                    
+                    <h3>Durastes (Roxo & Cinza)</h3>
+                    <div class="order-crest-container">
+                        <img id="durast-crest" 
+                            src="http://localhost:3000/images/18" 
+                            alt="Brasão da Ordem Materialki: Durastes" 
+                            class="order-crest">
+                    </div>
+                    <p class="order-description">
+                        Os Durastes lidam com o sólido: aço grisha, tecido-núcleo (semelhante às armaduras corporais modernas), têxteis e vidro.
+                    </p>
+
+                    <h3>Alquimistas (Roxo & Vermelho)</h3>
+                    <div class="order-crest-container">
+                        <img id="alkemi-crest" 
+                            src="http://localhost:3000/images/16" 
+                            alt="Brasão da Ordem Materialki: Alquimistas" 
+                            class="order-crest">
+                    </div>
+                    <p class="order-description">
+                        Os Alquimistas se especializam em venenos e pós explosivos.
+                    </p>
+                </div> <!-- FECHA O BLOCO MATERIALKI -->
+
+            </section>
+        </div>
+    </main>
+    <footer>
+        <span>&copy; Guilherme da Silva Ferraz, 2026 - Todos os direitos reservados.</span>
+    </footer>
+    <script src="./js/img.js"></script>
+</body>
+</html>

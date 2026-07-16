@@ -1,0 +1,1338 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+p, ul {
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    line-height: 1.5; 
+}
+
+p {
+    text-indent: 30px;
+    margin-bottom: 15px; /* Espaço entre parágrafos */
+}
+
+ul {
+    list-style-position: inside; /* Faz a bolinha da lista respeitar a margem */
+    list-style-type: square;     /* Deixa o marcador quadrado*/
+}
+
+ul li {
+    margin-bottom: 10px; /* Espaço entre um item da lista e outro */
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 15px;
+    padding: 40px; 
+    margin-bottom: 25px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Um leve toque dourado nas bordas */
+}
+.container{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1700px;
+}
+.card h3{
+    color: #D4AF37;
+    font-family: 'Almendra SC', serif;
+    margin-bottom: 15px;
+}
+.welcome {
+    font-size: 40px;
+    color: #D4AF37;
+    text-shadow: 0 0 15px rgba(212, 175, 55, 0.45);
+    text-align: center;
+    line-height: 1.2; 
+    border-bottom: 3px double #d4af37;
+    display: block;
+    width: fit-content;
+    margin: 40px auto 35px auto; /* Topo, Lados (centraliza), Baixo */
+    padding-bottom: 15px; /* Espaço entre o texto e a linha dourada */
+    font-family: 'Almendra SC', serif;
+    letter-spacing: 2px; 
+}
+.card h2{
+    margin-top: 60px;
+    margin-bottom: 40px;
+    color: #D4AF37;
+    font-family: 'Almendra SC', serif;
+    margin-bottom: 15px;
+}
+
+.container .sobre{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+}
+input, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    outline: none;
+}
+textarea{
+    height: 80px;
+    resize: none;
+}
+
+a {
+    text-decoration: none; /* Remove o sublinhado*/
+    color: #D4AF37; 
+    transition: 0.3s; 
+}
+
+a:hover {
+    color: white; /* Muda de cor ao passar o mouse */
+    text-shadow: 0 0 10px #ffecb3;
+}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.nome{ 
+    font-weight: bold; 
+    margin-top: 10px;
+}
+
+.author-container {
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1200px; 
+    margin-top: -133px; /* Compensa a margem negativa do header transparente */
+    padding-top: 160px; /* Empurra o card para baixo do menu */
+    padding-bottom: 50px;
+}
+
+.author-layout {
+    display: flex;
+    align-items: flex-start; /* Alinha o topo da imagem com o topo do texto */
+    margin-top: 30px;
+    gap: 40px;
+}
+
+.author-text {
+    flex: 1;
+    text-align: justify;
+    font-size: 18px; /* Fonte levemente maior para melhor leitura */
+    line-height: 1.6;
+}
+
+.author-text p {
+    margin-left: 0 !important; /* Remove margens herdadas que empurram o texto para fora */
+    margin-right: 0 !important;
+    text-indent: 30px;
+    margin-bottom: 20px;
+}
+
+.photo {
+    width: 280px;         
+    height: auto; /* Mantém a proporção correta da foto da Leigh Bardugo */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.author-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.author-photo img {
+    padding: 2px;
+    background-color: rgb(36, 16, 16); /* Cor do fundo da moldura */
+    border-radius: 8px; /* Bordas arredondadas */       
+}
+
+
+/*Aba Livros com sinopse, personagens...*/
+
+.livros {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.livro-item {
+    flex: 1; 
+    min-width: 250px; 
+    max-width: 800px;
+    text-align: center;
+}
+
+.livro-item img {
+    width: 250px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.livro-item img:hover {
+    transform: scale(1.05);
+}
+.tabela-conteudo p, 
+.tabela-conteudo ul {
+    margin-left: 0;
+    margin-right: 0;
+    text-indent: 0;
+    width: 100%;
+}
+
+.tabela-conteudo {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 0 10px;
+    text-align: left;
+}
+
+.tabela-conteudo.ativo {
+    max-height: 1800px;
+    margin-top: 15px;
+    padding: 15px;
+    border-top: 3px solid navy
+}
+
+.tabela-conteudo p{
+    font-size: 16px;
+    line-height: 1.5;
+}
+/* Estilo da Tabela dentro do Accordion */
+.tabela-livro, .tabela-personagem  {
+    width: 100%; /* Faz a tabela ocupar toda a largura do conteúdo */
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela-livro th {
+    background-color: #0f2862; 
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.tabela-livro td {
+    padding: 12px;
+    border-bottom: 1px solid navy;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+}
+
+/* Container que coloca os personagens lado a lado */
+.personagens-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.personagem-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px; /* Mantém os cards em um tamanho elegante */
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Moldura e padronização da foto do personagem */
+.personagem-foto-wrapper {
+    position: relative;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 380px; /* Altura fixa para todos os cards */
+    transition: 0.3s;
+}
+
+.personagem-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a foto preencher o espaço sem distorcer */
+    display: block;
+}
+
+.personagem-foto-wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgb(77, 74, 105);
+}
+
+/* Nome em cima da foto */
+.personagem-nome {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-family: 'Almendra SC', serif;
+    font-size: 1.2rem;
+}
+.tabela-personagem {
+    width: 100%;
+    table-layout: fixed; /* Força a tabela a não ultrapassar a largura do card */
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    word-wrap: break-word; /* Faz o texto quebrar para não esticar a tabela */
+}
+
+.tabela-personagem th{
+    background-color: #0f2862; 
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.sub-section-tabela-personagem{
+    background-color: #0f2862; 
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+
+.tabela-personagem td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Linha mais suave */
+    font-size: 14px; 
+    color: rgb(255, 255, 255);
+    vertical-align: top; /* Alinha o texto no topo da célula */
+}
+
+.tabela-personagem ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Garante alinhamento à esquerda na ficha */
+}
+
+.tabela-personagem ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    text-indent: 0; /* Remove o recuo de parágrafo dentro da tabela */
+}
+
+/* Ajuste do conteúdo do personagem para não ficar escuro demais */
+.personagem-item .tabela-conteudo {
+    background: #000000; /* Fundo mais claro para leitura da ficha */
+    border-top: 2px solid navy;
+}
+/*Efeito especial dos Amplificadores inspirado no Expectro Patronum de Harry Potter*/
+.amplificador-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px; 
+            height: 800px; 
+            pointer-events: none;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+.luz-fundo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -1;
+    border-radius: 50%;
+}
+.bicho-espiritual {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    z-index: 102; /* Garante que fique acima da luz de fundo */
+    
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+/* Animação da Explosão de Cor ao fundo */
+@keyframes explosaoLuz {
+    0% { transform: scale(0.4); opacity: 0; }
+    15% { transform: scale(1.2); opacity: 0.9; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Animação do Animal aparecendo */
+@keyframes animacaoPatrono {
+    0% { transform: scale(0.6); opacity: 0; }
+    15% { transform: scale(1); opacity: 1; }
+    85% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.1); opacity: 0; }
+}
+
+/* Grisha orders estilização */
+.grisha-order-container {
+    display: flex;
+    justify-content: center; /* Centraliza o wrapper preto horizontalmente */
+    align-items: center;     /* Centraliza o wrapper preto verticalmente */
+    min-height: 100vh;
+    width: 100vw;
+    background: rgb(85, 107, 110); /* Sua cor base escolhida */
+    
+    margin-top: -133px;  /* Anula a altura do header + a margem padrão dele */
+    padding-top: 150px;  /* Garante que o conteúdo não fique escondido sob o header */
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.grisha-order-wrapper {
+    background-color: rgb(0, 0, 0); 
+    padding: 40px;
+    width: 100%;
+    max-width: 850px; 
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 15px; 
+    box-shadow: 0 4px 20px rgba(106, 104, 104, 0.6);
+    box-sizing: border-box; /* Garante que o padding não estoure o tamanho máximo */
+}
+.grisha-order-wrapper h1{
+    text-align: center;
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA TELA DE LOGIN (CORRIGIDA)
+   ========================================================================== */
+.login-container, .register-container{
+    background: radial-gradient(
+            circle,
+            #1a2f4c 0%,    /* Centro mais claro */
+            #132238 40%,   /* Transição suave intermediária */
+            #08111e 80%,   /* Tom escuro se aproximando das bordas */
+            #03070d 100%   /* Borda externa quase preta */
+        );
+}
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+}
+
+/* Esta é a caixa branca unificada que junta a imagem e o formulário */
+.login-container .image-wrapper, 
+.login-container .login-form {
+    background-color: rgb(0, 0, 0);
+}
+
+/* Criando o efeito de caixa única dividida ao meio */
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-top-left-radius: 15px;  /* Arredonda canto superior esquerdo */
+    border-bottom-left-radius: 15px; /* Arredonda canto inferior esquerdo */
+    height: 550px; /* Altura fixa combinando com o formulário */
+    box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid goldenrod;
+    border-right: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.image-wrapper img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px; /* Arredondamento suave no mapa */
+}
+
+/* Formulário de Login integrado à caixa */
+.login-form {
+    background-color: #ffffff;
+    padding: 40px;
+    width: 400px;
+    height: 550px; /* Mesma altura da caixa da imagem */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-top-right-radius: 15px;    /* Arredonda canto superior direito */
+    border-bottom-right-radius: 15px; /* Arredonda canto inferior direito */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid goldenrod;
+    border-left: none; /* Remove a borda esquerda para unir com a imagem */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.login-form input::placeholder {
+    color: #757575;
+    font-style: italic;
+}
+
+/* Customização dos elementos internos do formulário */
+.login-form h1 {
+    color: goldenrod;
+    font-family: 'Almendra SC', serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f9f9f9;
+}
+
+.login-form input:focus {
+    border-color: goldenrod;
+    background-color: #ffffff;
+}
+
+/* Botão Entrar Azul igual ao da sua imagem de referência */
+.login-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: goldenrod; 
+    color: rgb(255, 255, 255);
+    font-family: 'Almendra SC', serif;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: goldenrod; /* Muda para dourado ao passar o mouse */
+}
+
+/* Link de cadastro na parte inferior */
+.form-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form-link p {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+    text-indent: 0; /* Remove o recuo padrão de parágrafo */
+}
+
+.form-link a {
+    color: goldenrod;
+    font-weight: bold;
+}
+
+.form-link a:hover {
+    color: goldenrod;
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+
+/* Aba cadastro */
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.register-form {
+    background-color: rgb(0, 0, 0);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    
+    /* Fechando a borda dourada e arredondando todos os cantos */
+    border: 2px solid goldenrod;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Customização dos textos internos para seguir o padrão do login */
+.register-form h1 {
+    color: goldenrod;
+    font-family: 'Almendra SC', serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.register-form .form-subtitle {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Estilização dos inputs dentro do registro */
+.register-form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f9f9f9;
+}
+
+.register-form input:focus {
+    border-color: goldenrod;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Botão de Enviar Dourado */
+.register-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: goldenrod; 
+    color: rgb(255, 255, 255);
+    font-family: 'Almendra SC', serif;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 15px;
+}
+
+.register-form button:hover {
+    background-color: #b8860b; /* Tom de dourado mais escuro no hover */
+}
+
+/* ==========================================================================
+   ESTILIZAÇÃO DA TELA DE DISCUSSÃO (TOMS DE VERMELHO)
+   ========================================================================== */
+
+.discuss-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    background: radial-gradient(
+        circle,
+        #4a0e17 0%,    /* Centro vermelho escarlate profundo */
+        #2b050a 45%,   /* Vermelho bem escuro e fechado */
+        #140204 80%,   /* Quase preto com nuance avermelhada */
+        #050001 100%   /* Borda externa preta */
+    );
+    padding: 20px;
+    margin-top: -133px;  /* Anula a altura do header (aprox. 108px) + os 25px de margem */
+    padding-top: 150px;  /* Empurra o conteúdo interno (wrapper) para baixo para não sumir sob o header */
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.discuss-wrapper {
+    background-color: rgb(0, 0, 0); 
+    padding: 40px;
+    width: 100%;
+    max-width: 850px; 
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border: 2px solid goldenrod;
+    border-radius: 15px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.discuss-title {
+    color: goldenrod;
+    font-family: 'Almendra SC', serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.discuss-subtitle {
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+.discuss-wrapper .field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.discuss-wrapper label {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.discuss-wrapper input,
+.discuss-wrapper textarea {
+    width: 100%;
+    padding: 14px;
+    background-color: #121212; 
+    border: 1px solid rgba(212, 175, 55, 0.3); 
+    border-radius: 6px;
+    font-size: 16px;
+    color: #ffffff; 
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.discuss-wrapper input::placeholder,
+.discuss-wrapper textarea::placeholder {
+    color: #8a807c;
+    font-style: italic;
+}
+
+/* Foco corrigido para manter o fundo escuro ao digitar */
+.discuss-wrapper input:focus,
+.discuss-wrapper textarea:focus {
+    border-color: goldenrod;
+    background-color: #1a1a1a;
+    outline: none;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.discuss-wrapper textarea {
+    height: 140px;
+    resize: none; 
+}
+
+.discuss-wrapper button {
+    width: 100%;
+    padding: 14px;
+    background-color: goldenrod; 
+    color: rgb(255, 255, 255);
+    font-family: 'Almendra SC', serif;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.discuss-wrapper button:hover {
+    background-color: #b8860b;
+}
+
+.discuss-wrapper button:active {
+    transform: scale(0.98);
+}
+
+/* Linha divisória idêntica à que você usa no cadastro */
+.forum-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0 10px 0;
+    font-family: 'Almendra SC', serif;
+    color: goldenrod;
+}
+
+.forum-divider::before, .forum-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px double rgba(212, 175, 55, 0.4);
+}
+
+.forum-divider span {
+    padding: 0 15px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.forum-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-height: 450px; 
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.forum-feed::-webkit-scrollbar {
+    width: 6px;
+}
+.forum-feed::-webkit-scrollbar-thumb {
+    background: goldenrod;
+    border-radius: 3px;
+}
+
+/* Cards dos posts integrados ao tema escuro/dourado */
+.forum-post {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.forum-post:hover {
+    border-color: rgba(212, 175, 55, 0.6);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #c9b9b3; /* Tom de cinza quente/creme para os metadados */
+}
+
+.post-author {
+    font-weight: bold;
+    color: goldenrod;
+}
+
+.post-date {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.post-title {
+    color: #ffffff;
+    font-family: 'Almendra SC', serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+.post-content {
+    color: #e6dfdd; /* Texto principal em creme suave */
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0;
+    text-indent: 0;
+}
+
+.post-actions {
+    display: flex;
+    gap: 20px; /* Espaço elegante entre Curtir e Comentar */
+    margin-top: 10px;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    padding-top: 12px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: #c9b9b3; /* Cor neutra inicial */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Deixa o número bem colado ao ícone */
+    font-size: 14px; /* Tamanho de texto discreto */
+    cursor: pointer;
+    padding: 2px 4px; /* Padding super reduzido para não ocupar espaço */
+    border-radius: 0;
+    transition: color 0.2s ease;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+/* Tamanho controlado do ícone/SVG (estilo Instagram) */
+.action-btn svg, 
+.action-btn img {
+    width: 20px !important;  /* Tamanho pequeno e responsivo */
+    height: 20px !important;
+    transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efeito de clique e hover específicos do botão de Like */
+.like-btn, 
+button.like-btn {
+    background: none !important;      
+    background-color: transparent !important;
+    border: none !important;          /* Remove bordas */
+    width: max-content !important;    /* Faz o botão ocupar apenas o tamanho do texto/ícone */
+    display: inline-flex !important;  /* Alinha o ícone e o texto lado a lado */
+    align-items: center;
+    gap: 8px;                         /* Espaço entre o coração e o texto */
+    padding: 5px 10px !important;     /* Margem interna pequena */
+    color: #d4af37 !important;        /* Tom dourado discreto para combinar com o tema */
+    font-size: 14px;                  /* Tamanho discreto */
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.1s ease;
+}
+
+/* Efeito ao passar o mouse: o coração fica vermelho ou um dourado mais brilhante */
+.like-btn:hover,
+button.like-btn:hover {
+    color: #ff3040 !important;        /* Vermelho clássico de curtir */
+    background: none !important;      /* Garante que nenhum fundo apareça no hover */
+}
+
+/* Reduz o tamanho do ícone de coração SVG ou imagem interno */
+.like-btn svg, 
+.like-btn img,
+.like-btn i {
+    width: 18px !important;
+    height: 18px !important;
+}
+
+/* Efeito de hover do botão de comentário */
+.comment-btn:hover {
+    color: #ffffff;
+    background-color: transparent !important;
+}
+
+/* Animação sutil de "pulso" ao passar o mouse (igual ao efeito de clique do Insta) */
+.action-btn:hover svg,
+.action-btn:hover img {
+    transform: scale(1.15);
+}
+
+.action-btn:active svg,
+.action-btn:active img {
+    transform: scale(0.9); /* Encolhe levemente ao clicar */
+}
+/* ==========================================================================
+   ESTILIZAÇÃO DA TELA DE CONFIGURAÇÕES (CARDS BRANCOS TRANSPARENTES)
+   ========================================================================== */
+
+/* Container principal com o fundo degradê preservado */
+.config-container {
+    min-height: 100vh;
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Título Principal da Página */
+.config-container h1 {
+    color: #e0e6ed; /* Prateado claro */
+    font-family: 'Almendra SC', serif;
+    font-size: 36px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+/* O Card: Branco levemente transparente com borda prateada */
+.config-card {
+    background-color: rgba(255, 255, 255, 0.65); /* Branco semi-transparente */
+    backdrop-filter: blur(10px); /* Efeito de vidro fosco suave */
+    -webkit-backdrop-filter: blur(10px);
+    border: 2px solid #b0c4de; /* Borda prateada/azulada clara */
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Títulos dos Cards em Azul Escuro */
+.config-card h2 {
+    color: #0f2862;
+    font-family: 'Almendra SC', serif;
+    font-size: 24px;
+    margin-top: 40px; /* <--- Adicione isso para afastar do bloco de cima */
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(15, 40, 98, 0.2);
+    padding-bottom: 8px;
+}
+
+/* Textos e Labels dentro do Card */
+.config-card p, 
+.config-card label {
+    color: #122954; /* Azul Escuro legível */
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.config-card p strong {
+    color: #0a1c42; /* Destaque em azul ainda mais profundo */
+}
+
+/* Inputs de formulário dentro do Card */
+.config-card input {
+    width: 100%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #99aab8; /* Borda cinza prateada */
+    border-radius: 6px;
+    color: #0f2862;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.config-card input:focus {
+    border-color: #0f2862;
+    box-shadow: 0 0 8px rgba(15, 40, 98, 0.2);
+}
+
+/* ================= DETALHES PRATEADOS (BOTÕES) ================= */
+
+/* Botão Primário Prateado */
+.config-card .btn-primary, .btn-danger {
+    display: inline-block;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #cccccc 0%, #e6e6e6 50%, #b3b3b3 100%); /* Degradê Prateado */
+    color: #0f2862 !important; /* Texto Azul Escuro */
+    font-family: 'Almendra SC', serif;
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #a6a6a6;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.config-card .btn-danger, .btn-primary:hover {
+    background: linear-gradient(135deg, #e6e6e6 0%, #ffffff 50%, #cccccc 100%);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+    text-shadow: none;
+}
+
+/* Ajuste fino para a área de layout do perfil */
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.profile-info p {
+    margin: 0;
+    text-indent: 0;
+}
+
+.upload-area img {
+    background-color: rgba(15, 40, 98, 0.1);
+    border: 2px dashed #0f2862;
+    border-radius: 50%;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.upload-area img:hover {
+    background-color: rgba(15, 40, 98, 0.2);
+    cursor: pointer;
+}
+
+/* Aba de politícas de privacidade */
+/* ==========================================================================
+   ESTILIZAÇÃO DA TELA DE POLÍTICA DE PRIVACIDADE
+   ========================================================================== */
+
+.policy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100vw;
+    /* Degradê azul/escuro místico combinando com a proposta do Grishaverse */
+    background: radial-gradient(
+        circle,
+        #1a2f4c 0%,    
+        #132238 40%,   
+        #08111e 80%,   
+        #03070d 100%   
+    );
+    padding: 20px;
+    margin-top: -133px;  /* Anula o header */
+    padding-top: 150px;  /* Respiro para o conteúdo não sumir sob o header */
+    padding-bottom: 40px;
+}
+
+.policy-wrapper {
+    background-color: rgb(0, 0, 0); 
+    padding: 45px;
+    width: 100%;
+    max-width: 900px; /* Largura perfeita para leitura de textos longos */
+    border: 2px solid goldenrod;
+    border-radius: 15px; 
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.policy-title {
+    color: goldenrod;
+    font-family: 'Almendra SC', serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.policy-subtitle {
+    text-align: center;
+    color: #ffffff;
+    font-size: 15px;
+    margin-bottom: 25px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Corpo do texto da política */
+.policy-content {
+    color: #e6dfdd; /* Tom de creme suave altamente legível */
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.policy-content h2 {
+    color: goldenrod;
+    font-family: 'Almendra SC', serif;
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 1px double rgba(212, 175, 55, 0.3);
+    padding-bottom: 5px;
+}
+
+.policy-content p {
+    text-indent: 0; /* Remove recuos excessivos para ficar mais corporativo/limpo */
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.policy-content ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.policy-content ul li {
+    margin-bottom: 8px;
+    color: #e6dfdd;
+    font-size: 17px;
+}
+
+/* Área do botão inferior */
+.policy-footer-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn-back {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: goldenrod; 
+    color: rgb(255, 255, 255) !important;
+    font-family: 'Almendra SC', serif;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-back:hover {
+    background-color: #b8860b; /* Dourado escuro no hover */
+    transform: translateY(-2px);
+    text-shadow: none;
+}
+
+/*
+   ESTILIZAÇÃO DOS CARDS DAS ORDENS GRISHA
+/* 1. O Container do Card */
+.order-card {
+    background-color: rgba(255, 255, 255, 0.03); /* Fundo levemente visível */
+    border: 1px solid rgba(212, 175, 55, 0.25); /* Moldura dourada fina */
+    border-radius: 12px;
+    padding: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza tudo na vertical */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. Força o Header e o Footer do Card a empilharem em coluna */
+.order-card-header, 
+.order-card-footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100%;
+    text-align: center;
+}
+
+/* 3. Ajuste dos Títulos internos do Card */
+.order-card-header h2 {
+    color: #D4AF37; /* Dourado */
+    font-family: 'Almendra SC', serif;
+    font-size: 32px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.order-card-header h3 {
+    color: rgb(219, 219, 218);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 25px; /* Adicionado um espaçamento para separar das seções anteriores */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+/* 4. Textos de Descrição dentro do Card */
+.order-description, 
+.power-description {
+    color: #e6dfdd; /* Cor creme suave para leitura */
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    text-align: justify;
+    text-indent: 30px;
+    margin: 15px auto;
+}
+
+/* 5. Iluminação de Fundo do Brasão */
+.order-crest-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 25px auto;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    /* Brilho dourado místico de fundo */
+    background: radial-gradient(
+        circle, 
+        rgba(212, 175, 55, 0.22) 0%, 
+        rgba(212, 175, 55, 0.05) 50%, 
+        transparent 70%
+    );
+    transition: background 0.4s ease-in-out;
+}
+
+/* 6. Comportamento da Imagem do Brasão */
+.order-crest {
+    max-width: 260px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    z-index: 2; /* Fica por cima do background iluminado */
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.85)); /* Destaca o contorno no escuro */
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
+}
+
+/* 7. Efeito Interativo no Hover do Card (Dispara quando passa o mouse no card inteiro) */
+.order-crest-container:hover {
+    background: radial-gradient(
+        circle, 
+        rgba(212, 175, 55, 0.35) 0%, 
+        rgba(212, 175, 55, 0.1) 50%, 
+        transparent 70%
+    );
+}
+
+.order-crest-container:hover .order-crest {
+    transform: scale(1.08); /* Aumenta ligeiramente o brasão focado */
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.45)) drop-shadow(0 0 5px rgba(0, 0, 0, 0.9));
+}
+
+/* Ajuste para alinhar o ícone de login */
+.login-icon {
+    display: inline-block;
+    margin-left: 20px; /* Espaçamento para não grudar no último menu */
+    cursor: pointer;
+}
+
+.login-icon img {
+    filter: invert(1); /* Use isso se o ícone for preto e seu menu tiver fundo escuro */
+    transition: transform 0.3s ease;
+    width: 35px !important; 
+    height: 35px !important;
+}
+
+.login-icon img:hover {
+    transform: scale(1.1); /* Efeito suave ao passar o mouse */
+}

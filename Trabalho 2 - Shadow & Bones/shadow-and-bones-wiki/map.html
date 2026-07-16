@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa Interativo - Shadow and Bones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #111;
+      color: #f2f2f2;
+    }
+    .page-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .map-container {
+      position: relative;
+      border: 2px solid #444;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #000;
+    }
+    .map-container img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+    #mapInfo {
+      padding: 14px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .hint {
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <main class="page-wrapper">
+    <h1>Mapa Interativo</h1>
+    <div class="map-container">
+      <img id="mapImage" src="https://grishaverse.com/wp-content/uploads/2022/08/Bardugo_Grishaverse-Map_No-Bleed-768x574.jpg" alt="Mapa de Shadow and Bones" usemap="#shadowMap">
+      <map name="shadowMap">
+        <area shape="rect" coords="50,50,220,180" href="#" data-name="Ketterdam" alt="Ketterdam">
+        <area shape="rect" coords="280,120,450,240" href="#" data-name="Os Grão-Ducados" alt="Os Grão-Ducados">
+        <area shape="rect" coords="520,60,760,190" href="#" data-name="Dobra" alt="Dobra">
+      </map>
+    </div>
+    <div id="mapInfo">
+      Passe o mouse sobre uma região do mapa para ver detalhes.
+      <div class="hint">Clique em uma área para exibir informações adicionais.</div>
+    </div>
+  </main>
+  <script>
+    const info = document.getElementById('mapInfo');
+    const areas = document.querySelectorAll('area[data-name]');
+    const details = {
+      'Ketterdam': 'Ketterdam: cidade portuária e centro de comércio das Sombras.',
+      'Os Grão-Ducados': 'Os Grão-Ducados: território dividido em várias nações e campos de batalha.',
+      'Dobra': 'Dobra: região controlada pela Grisha e sede do Pequeno Palácio.'
+    };
+
+    areas.forEach(area => {
+      const name = area.dataset.name;
+      area.addEventListener('mouseover', () => {
+        info.textContent = details[name] || name;
+      });
+      area.addEventListener('mouseout', () => {
+        info.textContent = 'Passe o mouse sobre uma região do mapa para ver detalhes.';
+      });
+      area.addEventListener('click', event => {
+        event.preventDefault();
+        info.textContent = 'Você selecionou: ' + name + '. ' + (details[name] || 'Informação não disponível.');
+      });
+    });
+  </script>
+</body>
+</html>

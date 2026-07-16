@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livros - Saga Sombra & Ossos</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link href="https://cdnfonts.com" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Metamorphous&family=New+Rocker&family=Style+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+
+    <div id="espaco-magico" class="amplificador-container"></div>
+     <header>
+        <div class="logo-container"> 
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <h1>Sombra & Ossos</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <!-- Menu Início / Explore -->
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">Explorar ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html">Página Principal</a></li>
+                        <li><a href="discuss.html">Fórum de Discussão</a></li>
+                        <li><a href="gallery.html">Galeria de Imagens</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Livros -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Livros ▾</a>
+                    <ul class="dropdown-content">
+                        <!-- Trilogia Sombra e Ossos -->
+                        <li class="nested-dropdown">
+                            <a href="#">Trilogia Sombra e Ossos ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-1">Sombra e Ossos (Livro 1)</a></li>
+                                <li><a href="books.html#livro-2">Sol e Tormenta (Livro 2)</a></li>
+                                <li><a href="books.html#livro-3">Ruína e Ascensão (Livro 3)</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Duologia Six of Crows -->
+                        <li class="nested-dropdown">
+                            <a href="#">Duologia Six of Crows ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-4">Six of Crows: Sangue e Mentiras</a></li>
+                                <li><a href="books.html#livro-5">Crooked Kingdom: Vingança e Redenção</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Duologia King of Scars -->
+                        <li class="nested-dropdown">
+                            <a href="#">Duologia King of Scars ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-6">King of Scars</a></li>
+                                <li><a href="books.html#livro-7">Rule of Wolves</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="others.html">Outras Obras</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Grishaverse -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Grishaverse ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="grishOrders.html">Ordens Grisha</a></li>
+                        <li><a href="amplifiers.html">Amplificadores</a></li>
+                        <li><a href="characters .html">Personagens</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Autora -->
+                <li><a href="author.html">Autora</a></li>
+                <li class="login-icon">
+                    <a href="login.html" title="Login">
+                        <img src="https://www.svgrepo.com/show/508196/user-circle.svg" alt="Login" style="width: 24px; height: 24px; vertical-align: middle;">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main class="container">
+        <!-- Espaço reservado para as animações dos amplificadores -->
+
+        <section class="card">
+            
+            <!-- ================= TRILOGIA SOMBRA E OSSOS ================= -->
+            <h2 id="trilogia" class="welcome">TRILOGIA SOMBRA E OSSOS</h2>
+            <p>
+                A Trilogia Sombra e Ossos, também conhecida como Trilogia Grisha, é uma série de três livros de fantasia e aventura para jovens 
+                adultos escrita por Leigh Bardugo. Os três livros principais, em ordem, são Sombra e Ossos, Sol e Tormenta e Ruína e Ascensão.
+            </p>
+            <br>
+
+            <div class="livros">
+                <!-- Livro 1 -->
+                <div class="livro-item" onclick="toggleLivro(1)">
+                    <img src="http://localhost:3000/images/20" class="livro" 
+                        onclick="invocarAmplificador('http://localhost:3000/images/29', '#ffecb3', 'detalhe', 'rgba(255, 149, 0, 0.8)');
+                        toggleLivro(1); event.stopPropagation();" alt="Capa Sombra e Ossos">
+
+                    <div class="tabela-conteudo" id="livro-1">
+                        <!-- Será preenchido dinamicamente pelo script.js -->
+                        <p class="loading">Carregando livro...</p>
+                    </div>
+                </div>
+
+                <!-- Livro 2 -->
+                <div class="livro-item" onclick="toggleLivro(2)">
+                    <img src="http://localhost:3000/images/21" class="livro" 
+                            onclick="invocarAmplificador('http://localhost:3000/images/30', '#00fff7', 'solido', 'rgba(0, 255, 247, 0.8)');
+                            toggleLivro(2); event.stopPropagation();" alt="Capa Sol e Tormenta">
+                            
+                    <div class="tabela-conteudo" id="livro-2">
+                        <p class="loading">Carregando livro...</p>
+                    </div>
+                </div>
+
+                <!-- Livro 3 -->
+                <div class="livro-item" onclick="toggleLivro(3)">
+                    <img src="http://localhost:3000/images/22" class="livro" 
+                            onclick="invocarAmplificador('http://localhost:3000/images/31', '#ff4d4d', 'inversao', 'rgba(255, 89, 0, 0.8)');
+                            toggleLivro(3); event.stopPropagation();" alt="Capa Ruína e Ascensão">
+                            
+                    <div class="tabela-conteudo" id="livro-3">
+                        <p class="loading">Carregando livro...</p>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <!-- ================= DUOLOGIA SIX OF CROWS ================= -->
+            <h2 id="duologia-six-crow" class="welcome">DUOLOGIA SIX OF CROWS</h2>
+            <p>
+                Passando-se no mesmo universo, a agitada e sombria cidade de Ketterdam serve como palco para a Duologia Six of Crows. 
+                Acompanhe Kaz Brekker e seu bando em um assalto impossível que pode mudar o rumo da magia Grisha no mundo.
+            </p>
+            <br>
+
+            <div class="livros">
+                <!-- Livro 4 (Six of Crows) -->
+                <div class="livro-item" onclick="toggleLivro(4)">
+                    <img src="http://localhost:3000/images/23" class="livro" 
+                            onclick="invocarAmplificador('http://localhost:3000/images/32', '#8b0000', 'detalhe', 'rgba(128, 0, 0, 0.8)');
+                            toggleLivro(4); event.stopPropagation();" alt="Capa Six of Crows">
+
+                    <div class="tabela-conteudo" id="livro-4">
+                        <p class="loading">Carregando livro...</p>
+                    </div>
+                </div>
+
+                <!-- Livro 5 (Crooked Kingdom) -->
+                <div class="livro-item" onclick="toggleLivro(5)">
+                    <img src="http://localhost:3000/images/24" class="livro" 
+                            onclick="invocarAmplificador('http://localhost:3000/images/33', '#212121', 'detalhe', 'rgba(255, 193, 7, 0.8)');
+                            toggleLivro(5); event.stopPropagation();" alt="Capa Crooked Kingdom">
+
+                    <div class="tabela-conteudo" id="livro-5">
+                        <p class="loading">Carregando livro...</p>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <!-- ================= DUOLOGIA KING OF SCARS ================= -->
+            <h2 id="duologia-king-scars" class="welcome">DUOLOGIA KING OF SCARS</h2>
+            <p>
+                Enfrente as ameaças políticas e os resquícios da magia negra que assolam Ravka. Nikolai Lantsov precisa lutar pelo seu reino, 
+                sua integridade e pelos segredos sombrios que habitam em sua própria alma.
+            </p>
+            <br>
+
+            <div class="livros">
+                <!-- Livro 6 (King of Scars) -->
+                <div class="livro-item" onclick="toggleLivro(6)">
+                    <img src="http://localhost:3000/images/25" class="livro" 
+                            onclick="invocarAmplificador('http://localhost:3000/images/27', '#e5c158', 'detalhe', 'rgba(229, 193, 88, 0.8)');
+                            toggleLivro(6); event.stopPropagation();" alt="Capa King of Scars">
+
+                    <div class="tabela-conteudo" id="livro-6">
+                        <p class="loading">Carregando livro...</p>
+                    </div>
+                </div>
+
+                <!-- Livro 7 (Rule of Wolves) -->
+                <div class="livro-item" onclick="toggleLivro(7)">
+                    <img src="http://localhost:3000/images/26" class="livro" 
+                            onclick="invocarAmplificador('http://localhost:3000/images/28', '#9e9e9e', 'detalhe', 'rgba(158, 158, 158, 0.8)');
+                            toggleLivro(7); event.stopPropagation();" alt="Capa Rule of Wolves">
+
+                    <div class="tabela-conteudo" id="livro-7">
+                        <p class="loading">Carregando livro...</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <span>&copy; Guilherme da Silva Ferraz, 2026 - Todos os direitos reservados.</span>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>

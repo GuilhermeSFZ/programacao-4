@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grishaverse - Discussão</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+SC&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css"> 
+    <link rel="stylesheet" href="./css/responsive.css">
+</head>
+<body>
+     <header>
+        <div class="logo-container"> 
+            <img src="img/logo.png" class="logo" alt="Logo">
+            <h1>Sombra & Ossos</h1>
+        </div>
+        <nav class="nav-menu">
+            <ul>
+                <!-- Menu Início / Explore -->
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">Explorar ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="index.html">Página Principal</a></li>
+                        <li><a href="discuss.html">Fórum de Discussão</a></li>
+                        <li><a href="gallery.html">Galeria de Imagens</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Livros -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Livros ▾</a>
+                    <ul class="dropdown-content">
+                        <!-- Trilogia Sombra e Ossos -->
+                        <li class="nested-dropdown">
+                            <a href="#">Trilogia Sombra e Ossos ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-1">Sombra e Ossos (Livro 1)</a></li>
+                                <li><a href="books.html#livro-2">Sol e Tormenta (Livro 2)</a></li>
+                                <li><a href="books.html#livro-3">Ruína e Ascensão (Livro 3)</a></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Duologia Six of Crows -->
+                        <li class="nested-dropdown">
+                            <a href="#">Duologia Six of Crows ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-4">Six of Crows: Sangue e Mentiras</a></li>
+                                <li><a href="books.html#livro-5">Crooked Kingdom: Vingança e Redenção</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Duologia King of Scars -->
+                        <li class="nested-dropdown">
+                            <a href="#">Duologia King of Scars ▸</a>
+                            <ul class="nested-content">
+                                <li><a href="books.html#livro-6">King of Scars</a></li>
+                                <li><a href="books.html#livro-7">Rule of Wolves</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="others.html">Outras Obras</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Grishaverse -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Grishaverse ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="grishOrders.html">Ordens Grisha</a></li>
+                        <li><a href="amplifiers.html">Amplificadores</a></li>
+                        <li><a href="characters .html">Personagens</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Autora -->
+                <li><a href="author.html">Autora</a></li>
+                <li class="login-icon">
+                    <a href="login.html" title="Login">
+                        <img src="https://www.svgrepo.com/show/508196/user-circle.svg" alt="Login" style="width: 24px; height: 24px; vertical-align: middle;">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="discuss-container">
+        <div class="discuss-wrapper">
+            <div class="form-header">
+                <h1 class="discuss-title">Fórum de Discussão</h1>
+                <p class="discuss-subtitle">Compartilhe suas teorias sobre o Grishaverse</p>
+            </div>
+
+            <!-- Formulário de Envio -->
+            <form id="discuss-form"> 
+                <div class="field">
+                    <label for="discuss-topic">Iniciar uma nova discussão *</label>
+                    <input type="text" id="discuss-topic" name="topic" placeholder="Ex: O destino dos Amplificadores..." required>
+                </div>
+                <div class="field">
+                    <textarea id="discuss-message" name="message" placeholder="Escreva aqui sua teoria..." required></textarea>
+                </div>
+                <button type="submit">Publicar no Fórum</button>
+            </form>
+
+            <!-- DIVISÓRIA VISUAL -->
+            <div class="forum-divider">
+                <span>Discussões Recentes</span>
+            </div>
+
+            <!-- LISTA DE TÓPICOS DINÂMICOS (Gerenciados via JS) -->
+            <div class="forum-feed">
+                <!-- O script Discuss.js vai preencher este espaço dinamicamente -->
+            </div>
+
+            <p class="form-link">
+                <a href="index.html">Voltar para a Página Inicial</a>
+            </p>
+        </div>
+    </main>
+    <script type="module">
+        import { init, create, like, addComment } from './js/discuss.js';
+
+        // Inicializa o feed de discussões
+        init('.forum-feed');
+
+        // 1. Captura o envio de novos tópicos
+        const form = document.getElementById('discuss-form');
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const titleInput = document.getElementById('discuss-topic');
+                const messageInput = document.getElementById('discuss-message');
+
+                try {
+                    await create(titleInput.value, messageInput.value);
+                    titleInput.value = '';
+                    messageInput.value = '';
+                    alert('Teoria publicada com sucesso!');
+                    init('.forum-feed'); // Atualiza a lista
+                } catch (error) {
+                    console.error(error);
+                    alert('Erro ao publicar. Verifique se você está logado.');
+                }
+            });
+        }
+
+        // 2. Ouvinte de eventos inteligente para os botões dentro do feed dinâmico (.forum-feed)
+        const feedContainer = document.querySelector('.forum-feed');
+        if (feedContainer) {
+            feedContainer.addEventListener('click', async (e) => {
+                
+                // Trata o clique no botão de CURTIR
+                const likeBtn = e.target.closest('.like-btn');
+                if (likeBtn) {
+                    const postId = likeBtn.getAttribute('data-id');
+                    try {
+                        await like(postId);
+                        init('.forum-feed'); // Recarrega o feed com a curtida nova
+                    } catch (error) {
+                        console.error(error);
+                        alert('Erro ao curtir. Certifique-se de que está logado!');
+                    }
+                }
+            });
+
+            // Trata o envio de COMENTÁRIOS dentro dos posts
+            feedContainer.addEventListener('submit', async (e) => {
+                const commentForm = e.target.closest('.comment-form');
+                if (commentForm) {
+                    e.preventDefault();
+                    const postId = commentForm.getAttribute('data-id');
+                    const inputField = commentForm.querySelector('input');
+                    const textValue = inputField.value;
+
+                    try {
+                        await addComment(postId, textValue);
+                        inputField.value = ''; // Limpa o campo
+                        init('.forum-feed'); // Atualiza o feed com o novo comentário aparecendo
+                    } catch (error) {
+                        console.error(error);
+                        alert('Erro ao comentar. Certifique-se de que está logado!');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
